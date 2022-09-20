@@ -34,7 +34,7 @@ const sidebars =
 {
   docs: 
   [
-    'intro',
+    'introduction',
   ],
 };
 

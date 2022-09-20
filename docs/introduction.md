@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Welcome
-id: intro
+id: introduction
 sidebar_label: Welcome
 ---
 
