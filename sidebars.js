@@ -35,6 +35,23 @@ const sidebars =
   docs: 
   [
     'introduction',
+    {
+      type: 'category',
+      label: 'Projects',
+      link: 
+      {
+        type: 'generated-index',
+        title: 'My Projects',
+        description: 'Description and documentation of all of my projects',
+        keywords: ['documentation, descriiption'],
+      },
+      collapsed: false,
+      items: [
+        'projects/arch-linux-gui/introduction-alg',
+        'projects/agni/introduction-agni',
+        'projects/reborn/introduction-reborn',
+      ],
+    },
   ],
 };
 
