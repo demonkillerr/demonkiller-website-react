@@ -2,10 +2,10 @@
 slug: first-blog-post
 title: First Blog Post
 authors:
-  name: Gao Wei
-  title: Docusaurus Core Team
-  url: https://github.com/wgao19
-  image_url: https://github.com/wgao19.png
+  name: DemonKiller
+  title: Open Source Developer
+  url: https://demonkiller.tech
+  image_url: https://github.com/demonkillerr.png
 tags: [hola, docusaurus]
 ---
 
