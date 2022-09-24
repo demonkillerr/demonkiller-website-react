@@ -6,7 +6,7 @@ authors:
   title: Open Source Developer
   url: https://demonkiller.tech
   image_url: https://github.com/demonkillerr.png
-tags: [hola, docusaurus]
+tags: [blog, first]
 ---
 
 Hello this is my first blog post.
