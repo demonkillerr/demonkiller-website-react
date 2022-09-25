@@ -21,3 +21,17 @@
   align-items: center;
   justify-content: center;
 }
+
+.sectionTitle {
+  font-size: 2rem;
+}
+
+.sectionTagline {
+  font-size: 1.25rem;
+}
+
+.sectionAlt {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+
