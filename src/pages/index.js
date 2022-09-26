@@ -70,17 +70,33 @@ function HeroSection() {
   );
 }
 
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+function Home() {
+  const {siteConfig = {}} = useDocusaurusContext();
   return (
     <Layout
-      title={`Welcome from ${siteConfig.title}`}
-      description="DemonKiller's Portfolio & Project Documentation Website">
-      
-      <main>
-        <HeroSection />
-        <HomepageFeatures />
-      </main>
+      title="My Portfolio"
+      description={siteConfig.tagline}>
+      <HeroSection />
+
     </Layout>
   );
 }
+
+
+// export default function Home() {
+//   const {siteConfig} = useDocusaurusContext();
+//   return (
+//     <Layout
+//       title={`Welcome from ${siteConfig.title}`}
+//       description="DemonKiller's Portfolio & Project Documentation Website">
+      
+//       <main>
+//         <HeroSection />
+//         <HomepageFeatures />
+//       </main>
+//     </Layout>
+//   );
+// }
+
+
+export default Home;
