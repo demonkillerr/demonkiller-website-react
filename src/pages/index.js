@@ -77,12 +77,57 @@ function Home() {
       title="My Portfolio"
       description={siteConfig.tagline}>
       <HeroSection />
-
+      <WhoAmI />
     </Layout>
   );
 }
 
-
+function WhoAmI() {
+  return (
+    <div className={clsx('padding-vert--xl', styles.sectionAlt)}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--8 col--offset-2">
+            <h2 className="text--center margin-bottom--lg">
+              <span className="badge badge--primary">Who Am I?</span>
+            </h2>
+            <h3
+              className={clsx(
+                'text--center',
+                'margin-bottom--lg',
+                styles.sectionTitle,
+              )}>
+              Open Souce enthusiast having more than two years of experiance with 
+              linux based operating systems
+              
+            </h3>
+            <p className={clsx('margin-bottom--lg', styles.sectionTagline)}>
+              I enjoy learning new technologies, 
+              while tinkering with open-source software revolving around linux, and the web. 
+              I also love to play with computer hardware. I have a small 
+              {' '} <strong><a href={DK_YT_URL} rel="noopener" target="_blank">
+                youtube</a></strong> channel, where you can find content regarding the same.
+              <br />
+              <br />
+              For the past two years, I have been working on projects involving 
+              operating systems. My biggest project to date is the {' '}
+              <strong>ALG installer</strong>, an offline, graphical installer
+              for{' '} <strong>Arch Linux</strong>. You can find relevant documentation 
+              regarding it, as well as my other projects, here.
+              <br />
+              <br />
+              Outside of tech, I find myself enjoying music. I can play the drums, and various
+              indian percussion instruments with varying degrees of expertise. I also have been 
+              teaching myself to play the electric guitar, so that I can jam to my favourite songs.
+              <br />
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 // export default function Home() {
 //   const {siteConfig} = useDocusaurusContext();
 //   return (
