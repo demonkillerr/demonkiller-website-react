@@ -39,11 +39,20 @@ function HeroSection() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
         <img
           alt={siteConfig.title}
           className={clsx(styles.heroBannerLogo, 'margin-vert--md')}
           src={useBaseUrl('img/logo.svg')}
         />
+        <div className={styles.buttons}>
+          <Link
+            className="button button--primary button--lg"
+            to="/docs/introduction">
+            Start Reading ⏱️
+          </Link>
+        </div>
        
         
       </div>
@@ -57,7 +66,7 @@ export default function Home() {
     <Layout
       title={`Welcome from ${siteConfig.title}`}
       description="DemonKiller's Portfolio & Project Documentation Website">
-      <HomepageHeader/>
+      
       <main>
         <HeroSection />
         <HomepageFeatures />
