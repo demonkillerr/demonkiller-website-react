@@ -62,6 +62,7 @@ const config = {
         },
       },
       navbar: {
+        hideOnScroll: true,
         title: 'DemonKiller',
         logo: {
           alt: 'DemonKiller Logo',
