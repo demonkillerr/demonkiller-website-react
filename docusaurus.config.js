@@ -79,7 +79,7 @@ const config = {
 
 
           {
-            href: 'https://github.com/yangshun/tech-interview-handbook',
+            href: 'https://github.com/demonkillerr',
             position: 'right',
             className: 'navbar-icon',
             'aria-label': 'GitHub repository',
