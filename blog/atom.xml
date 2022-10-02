@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://demonkillerr.github.io/blog</id>
+    <id>https://demonkiller.tech/blog</id>
     <title>DemonKiller Blog</title>
     <updated>2022-07-28T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://demonkillerr.github.io/blog"/>
+    <link rel="alternate" href="https://demonkiller.tech/blog"/>
     <subtitle>DemonKiller Blog</subtitle>
-    <icon>https://demonkillerr.github.io/img/favicon.ico</icon>
+    <icon>https://demonkiller.tech/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[First Blog Post]]></title>
         <id>first-blog-post</id>
-        <link href="https://demonkillerr.github.io/blog/first-blog-post"/>
+        <link href="https://demonkiller.tech/blog/first-blog-post"/>
         <updated>2022-07-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Hello this is my first blog post.]]></summary>
         <content type="html"><![CDATA[<p>Hello this is my first blog post.</p>]]></content>
