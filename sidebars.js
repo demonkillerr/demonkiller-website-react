@@ -43,7 +43,7 @@ const sidebars =
         type: 'generated-index',
         title: 'My Projects',
         description: 'Description and documentation of all of my projects',
-        keywords: ['documentation, descriiption'],
+        keywords: ['documentation, description'],
       },
       collapsed: false,
       items: [
