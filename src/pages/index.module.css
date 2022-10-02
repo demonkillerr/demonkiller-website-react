@@ -14,6 +14,20 @@
   .heroBanner {
     padding: 2rem;
   }
+
+  .heroBannerLogo {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heroBannerLogo {
+    padding-right: 4rem;
+    padding-left: 1rem;
+    position: relative;
+  }
 }
 
 .heroBannerLogo {
