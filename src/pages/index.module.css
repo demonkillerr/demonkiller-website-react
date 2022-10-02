@@ -30,6 +30,22 @@
   }
 }
 
+@media screen and (max-width: 398px) {
+  .heroBannerLogo {
+    padding-right: 7rem;
+  }
+}
+
+@media screen and (max-width: 366px) {
+  .heroBanner {
+    padding-right: 2rem;
+  }
+
+  .heroBannerLogo {
+    padding-right: 8rem;
+  }
+}
+
 .heroBannerLogo {
   max-width: 400px;
 }
