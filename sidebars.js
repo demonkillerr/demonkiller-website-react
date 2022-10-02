@@ -47,9 +47,7 @@ const sidebars =
       },
       collapsed: false,
       items: [
-        'projects/arch-linux-gui/introduction-alg',
-        'projects/agni/introduction-agni',
-        'projects/reborn/introduction-reborn',
+        'projects/arch-linux-gui/introduction',
       ],
     },
   ],
