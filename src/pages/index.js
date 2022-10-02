@@ -50,7 +50,7 @@ function HeroSection() {
         />
         <p className="hero__subtitle">
           
-          Website of the creater of{' '}
+          Website of the creator of{' '}
           <a href={ALG_URL} rel="noopener" target="_blank">
             Arch Linux GUI <br />
           </a>
@@ -97,7 +97,7 @@ function WhoAmI() {
                 'margin-bottom--lg',
                 styles.sectionTitle,
               )}>
-              Open Souce enthusiast having more than two years of experiance with 
+              Open Source enthusiast having more than two years of experiance with 
               linux based operating systems
               
             </h3>
