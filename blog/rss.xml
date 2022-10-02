@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>DemonKiller Blog</title>
-        <link>https://demonkillerr.github.io/demonkiller-website-react/blog</link>
+        <link>https://demonkillerr.github.io/blog</link>
         <description>DemonKiller Blog</description>
         <lastBuildDate>Thu, 28 Jul 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>en</language>
         <item>
             <title><![CDATA[First Blog Post]]></title>
-            <link>https://demonkillerr.github.io/demonkiller-website-react/blog/first-blog-post</link>
+            <link>https://demonkillerr.github.io/blog/first-blog-post</link>
             <guid>first-blog-post</guid>
             <pubDate>Thu, 28 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Hello this is my first blog post.]]></description>
