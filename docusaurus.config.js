@@ -188,6 +188,24 @@ const config = {
             ],
           },
           {
+            title: 'Contact',
+            items: [
+              {
+                label: 'Telegram',
+                href: 'https://t.me/demonkillerr',
+              },
+              {
+                label: 'Instagram',
+                href: 'https://www.instagram.com/demonkillerrrr/',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discordapp.com/users/9375',
+              },
+              
+            ],
+          },
+          {
             title: 'More',
             items: [
               {
