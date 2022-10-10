@@ -1,6 +1,6 @@
 ---
 title: Build your own ALG ISO
-id: build-alg
+id: build-alg-iso
 sidebar_label: Build ALG ISO
 ---
 

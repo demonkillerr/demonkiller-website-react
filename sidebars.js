@@ -55,7 +55,7 @@ const sidebars =
             id: 'projects/arch-linux-gui/introduction',
           },
           items: [
-            'projects/arch-linux-gui/build-alg',
+            'projects/arch-linux-gui/build-alg-iso',
           ],
         },
       ],
