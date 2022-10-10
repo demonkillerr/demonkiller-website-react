@@ -1,10 +1,10 @@
 ---
-title: Build Your own ALG ISO
+title: Build your own ALG ISO
 id: build-alg
 sidebar_label: Build ALG ISO
 ---
 
-# Build Your own ALG ISO
+# Build your own ALG ISO
 
 This document will guide you on how to build your own ALG ISO(s).
 
