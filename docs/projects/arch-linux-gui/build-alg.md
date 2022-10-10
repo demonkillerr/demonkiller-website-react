@@ -12,7 +12,7 @@ This document will guide you on how to build your own ALG ISO(s).
 
 The  **ALG** project has been discontinued since `July 2022`. 
 
-The ALG repositories haven't been updated as of `October 2022`. Many things are prone to break or simply not work. While I will try my best to fix the issue, things will go really slowly, from my end.
+The ALG repositories haven't been updated as of `October 2022`. Many things are prone to break or simply not work. While I will try my best to fix the issues, things will go really slowly, from my end.
 
 You will have to take _extra steps_ than described in this document to make them work. Feel free to ask questions on the [discord server](https://discord.com/invite/NgAFEw9Tkf) or [telegram discussion group](https://t.me/joinchat/yODEBq7J8fA3ZWM1). Many members of the community build the ISOs and they will be able to help you.
 
