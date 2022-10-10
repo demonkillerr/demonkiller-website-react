@@ -47,7 +47,17 @@ const sidebars =
       },
       collapsed: false,
       items: [
-        'projects/arch-linux-gui/introduction',
+        {
+          type: 'category',
+          label: 'Arch Linux GUI',
+          link: {
+            type: 'doc',
+            id: 'projects/arch-linux-gui/introduction',
+          },
+          items: [
+            'projects/arch-linux-gui/build-alg',
+          ],
+        },
       ],
     },
   ],
