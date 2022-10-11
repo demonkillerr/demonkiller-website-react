@@ -54,7 +54,7 @@ const sidebars =
           link: 
           {
             type: 'doc',
-            id: 'projects/arch-linux-gui/introduction',
+            id: 'projects/arch-linux-gui/about-alg',
           },
           items: 
           [

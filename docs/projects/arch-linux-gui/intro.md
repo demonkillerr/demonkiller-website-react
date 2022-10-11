@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Arch Linux GUI
-id: introduction
+id: about-alg
 sidebar_label: Arch Linux GUI
 ---
 
