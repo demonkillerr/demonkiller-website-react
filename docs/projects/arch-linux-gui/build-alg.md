@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 title: Build your own ALG ISO
 id: build-alg-iso
 sidebar_label: Build ALG ISO

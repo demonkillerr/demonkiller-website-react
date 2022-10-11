@@ -46,15 +46,18 @@ const sidebars =
         keywords: ['documentation, description'],
       },
       collapsed: false,
-      items: [
+      items: 
+      [
         {
           type: 'category',
           label: 'Arch Linux GUI',
-          link: {
+          link: 
+          {
             type: 'doc',
             id: 'projects/arch-linux-gui/introduction',
           },
-          items: [
+          items: 
+          [
             'projects/arch-linux-gui/build-alg-iso',
           ],
         },
