@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
-title: Configuring installer
+title: Building the installer
 id: installer
-sidebar_label: Configure Installer
+sidebar_label: Build Installer
 ---
 
 The installer used in ALG is calamares. Calamares is a distribution independent operating system installer framework. It's written in C++/Qt. This document will show you how to setup calamares. Calamares has a comprehensive guide on it's <a href="https://github.com/calamares/calamares/wiki">wiki</a>.
@@ -116,7 +116,13 @@ The following packages are in the AUR. You can install them with yay or paru.
 paru -S mkinitcpio-openswap ckbcomp
 ```
 
-You can skip required installing packages manually and directly install them while building
+#### You can skip installing required packages manually and directly install them while building
+
+:::danger
+
+AUR packages might not install this way
+
+:::
 
 :::caution
 
