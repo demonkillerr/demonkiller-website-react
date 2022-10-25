@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdemonkiller_portfolio=self.webpackChunkdemonkiller_portfolio||[]).push([[713],{3457:l=>{l.exports=JSON.parse('[{"label":"blog","permalink":"/blog/tags/blog","count":1},{"label":"first","permalink":"/blog/tags/first","count":1}]')}}]);
