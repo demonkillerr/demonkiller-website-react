@@ -65,7 +65,7 @@ sudo pacman -S archiso
 
 :::note
 
-ALG has many editions. Understand the differences between them [here](./intro.md#difference-between-alg-editions).
+ALG has many editions. Understand the differences between them [here](./about-alg.md#difference-between-alg-editions).
 
 :::
 
@@ -106,7 +106,7 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 ```
 
 #### Configuring chaotic AUR repository
-While you can comment out the <code>chaotic-aur</code> repository, it is required to build some editions like the [Window Managers](./intro.md#window-managers) or Mate editions. To enable the chaotic-aur, type the following commands:
+While you can comment out the <code>chaotic-aur</code> repository, it is required to build some editions like the [Window Managers](./about-alg.md#window-managers) or Mate editions. To enable the chaotic-aur, type the following commands:
 
 ```bash
 sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
