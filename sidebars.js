@@ -59,6 +59,7 @@ const sidebars =
           items: 
           [
             'projects/arch-linux-gui/build-alg-iso',
+            'projects/arch-linux-gui/installer',
           ],
         },
       ],
