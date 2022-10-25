@@ -1,6 +1,6 @@
 ---
 slug: does-indian-army-need-a-new-mbt
-title: Does Indian Army need a new Main Battle Tank
+title: Does Indian Army need a new Main Battle Tank?
 authors:
   name: DemonKiller
   title: Open Source Developer
