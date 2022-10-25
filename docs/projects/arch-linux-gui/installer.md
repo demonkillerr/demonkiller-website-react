@@ -9,7 +9,7 @@ The installer used in ALG is calamares. Calamares is a distribution independent 
 
 ## Building Calamares
 
-Calamares needs to be compiled(built). Calamares can be built in the following way. More details can be found on the calamares wiki, linked above.
+Calamares needs to be compiled(built). Calamares can be built in the following steps. More details can be found on the calamares wiki, linked above.
 
 ```bash
 $ git clone https://github.com/calamares/calamares.git
