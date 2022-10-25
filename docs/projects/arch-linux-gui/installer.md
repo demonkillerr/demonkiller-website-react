@@ -145,4 +145,4 @@ pkgname-pkgver-pkgrel-arch-pkg.tar.zst
 calamares-3.2.61-1-x86_64.pkg.tar.zst
 ```
 
-The <code>pkg</code> folder contains the uncompressed tarball and <code>src</code> contains the cloned repository. Make sure you cleanup this folder when making a new package.
+The <code>pkg</code> folder contains the uncompressed tarball and <code>src</code> contains the cloned repository. Make sure you cleanup this folder when making a new package. This package can be deployed on any repository.
