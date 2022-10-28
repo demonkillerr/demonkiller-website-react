@@ -1,6 +1,6 @@
 ---
 title: Configuring the installer
-id: config
+id: installer-config
 sidebar_label: Installer Config
 ---
 

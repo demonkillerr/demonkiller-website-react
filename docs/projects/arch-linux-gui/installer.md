@@ -1,6 +1,6 @@
 ---
 title: Building the installer
-id: installer
+id: build-installer
 sidebar_label: Build Installer
 ---
 
