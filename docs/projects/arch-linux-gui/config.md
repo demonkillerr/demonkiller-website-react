@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Building the installer
-id: installer
-sidebar_label: Build Installer
+title: Configuring the installer
+id: config
+sidebar_label: Configuring Installer
 ---
