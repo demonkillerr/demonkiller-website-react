@@ -74,7 +74,7 @@ function Home() {
   const {siteConfig = {}} = useDocusaurusContext();
   return (
     <Layout
-      title="My Portfolio"
+      title="Welcome 👋 "
       description={siteConfig.tagline}>
       <HeroSection />
       <WhoAmI />
