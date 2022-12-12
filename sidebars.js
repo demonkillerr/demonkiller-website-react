@@ -65,6 +65,22 @@ const sidebars =
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'Programming',
+      link:
+      {
+        type: 'generated-index',
+        title: 'Lang',
+        description: 'Syntax of various languages for reference',
+        keywords: ['documentation, description'],
+      },
+      collapsed: false,
+      items: 
+      [
+        'programming/langs/markdown'
+      ],
+    },
   ],
 };
 
