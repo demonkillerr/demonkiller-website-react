@@ -78,7 +78,8 @@ const sidebars =
       collapsed: true,
       items: 
       [
-        'programming/langs/markdown',
+        'programming/langs/git',
+        //'programming/langs/markdown',
       ],
     },
     // {
