@@ -71,16 +71,32 @@ const sidebars =
       link:
       {
         type: 'generated-index',
-        title: 'Lang',
-        description: 'Syntax of various languages for reference',
+        title: 'Langs & Tools',
+        description: 'Reference documents for various tools & languages',
         keywords: ['documentation, description'],
       },
-      collapsed: false,
+      collapsed: true,
       items: 
       [
-        'programming/langs/markdown'
+        'programming/langs/markdown',
       ],
     },
+    // {
+    //   type: 'category',
+    //   label: 'Tutorials',
+    //   link:
+    //   {
+    //     type: 'generated-index',
+    //     title: 'Tutorials',
+    //     description: 'Tutorial documents to supplement my technical youtube videos',
+    //     keywords: ['tutorials, youtube'],
+    //   },
+    //   collapsed: true,
+    //   items: 
+    //   [
+    //     'tutorials/db-win-linux_mint'
+    //   ],
+    // },
   ],
 };
 
