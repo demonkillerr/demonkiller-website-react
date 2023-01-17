@@ -88,3 +88,70 @@ $ ./configure --prefix=/usr
 $ make all doc info
 $ sudo make install install-doc install-html install-info
 ```
+
+## Setting up Git
+
+Before using git, the first thing that needs to be done is to set up your username and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating. You can set these global configuration variables like this:
+
+```bash
+git config --global user.name "DemonKiller"
+git config --global user.email demonkiller@example.com
+```
+
+You can check you Git global configuration values with
+
+```bash
+git config --list
+``` 
+
+## Getting help with Git (man pages)
+
+You can launch Git command man pages with <code>--help</code> flag. The syntax is
+
+```bash
+git <command> --help
+```
+
+For example, if you want help with the <code>git add</code> command, you can type
+
+```bash
+git add --help
+```
+
+## Git Usecases
+
+There are two common scenarios where you would want to use Git as a VCS.
+1. Start tracking existing local project with Git
+2. Contribute/develop a remote existing project
+
+### Tracking local project
+
+#### Start tracking project with git
+
+Tracking a local project is extremely simple. You just have to initialise git in the project folder. Navigate to the project folder, and open a terminal in that folder. You can start tracking with 
+
+```bash
+git init
+```
+
+Running this will create a <code>.git</code> folder in that directory. Any file or folder that starts with a dot/period is hidden. You can access this folder by pressing <code><b>Control + H</b></code> in most major file managers like Dolphin (KDE Plasma), Nautilus (GNOME), Thunar (XFCE), Caja (MATE), etc. In the command line, you can see this file using the <code>-a</code> (all) flag.
+
+```bash
+ls -la
+```
+
+#### Stop tracking project
+
+To stop tracking the said folder or project, simply remove the .git folder.
+
+```bash
+rm -rvf .git
+```
+
+:::tip
+The <code>-r</code> flag is compulsary as it will recursively delete contents of the <code>.git</code> folder.
+
+The <code>-v</code> flag is optional, yet recommended. It spits out verbose output on what is being deleted.
+
+The <code>-f</code> flag is optional, yet recommended too. It forces deletion of any  nonexistent files and arguments.
+:::
