@@ -8,7 +8,7 @@ This document covers the Git Version Control System.
 
 Git is a distributed Version Control System (VCS). In a DVCS (such as Git, Mercurial or Bazaar), clients don’t just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. Thus, if any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it. Every clone is really a full backup of all the data.
 
-## Installing git
+## Installing Git
 
 Git can be installed in the following way, on the following systems.
 
