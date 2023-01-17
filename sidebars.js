@@ -78,8 +78,22 @@ const sidebars =
       collapsed: true,
       items: 
       [
-        'code/tools/git',
-        //'code/tools/markdown',
+        {
+          type: 'category',
+          label: 'Tools & Utilities',
+          link: 
+          {
+            type: 'generated-index',
+            title: 'Tools & Utilities',
+            description: 'Reference documents for various tools used in the world of code',
+            keywords: ['version-control, tools'],
+          },
+          items: 
+          [
+            'code/tools/git',
+            //'code/tools/markdown',
+          ],
+        },
       ],
     },
     // {
