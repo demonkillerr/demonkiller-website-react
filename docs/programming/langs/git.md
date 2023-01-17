@@ -155,3 +155,23 @@ The <code>-v</code> flag is optional, yet recommended. It spits out verbose outp
 
 The <code>-f</code> flag is optional, yet recommended too. It forces deletion of any  nonexistent files and arguments.
 :::
+
+#### Know status of project files
+
+In order to know status of project files, we can use
+
+```bash
+git status
+```
+
+
+#### Ignore files
+Usually, there are files that we want to ignore in the project. These could be personal config files for example. We can create a <code>gitingore</code> file and list such files and folders in this file. The gitignore is a simple text file. This file is hidden and starts with a dot/period. 
+
+```bash title=".gitignore"
+*.conf
+test.py
+myfolder
+```
+You can check the status of files that are stated in gitignore with the the [status](#know-status-of-project-files) command.
+
