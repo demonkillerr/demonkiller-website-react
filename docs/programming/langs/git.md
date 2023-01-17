@@ -124,7 +124,7 @@ There are two common scenarios where you would want to use Git as a VCS.
 1. Start tracking existing local project with Git
 2. Contribute/develop a remote existing project
 
-### Tracking local project
+### Track a local project
 
 #### Start tracking project with git
 
@@ -175,3 +175,82 @@ myfolder
 ```
 You can check the status of files that are stated in gitignore with the the [status](#know-status-of-project-files) command.
 
+
+#### Recording changes to the repository
+Each file in your working directory can be in one of two states: tracked or untracked. Tracked files are files that were in the last snapshot, as well as any newly staged files; they can be unmodified, modified, or staged. In short, tracked files are files that Git knows about.
+
+Untracked files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area. When you first clone a repository, all of your files will be tracked and unmodified because Git just checked them out and you haven’t edited anything.
+
+As you edit files, Git sees them as modified, because you’ve changed them since your last commit. As you work, you selectively stage these modified files and then commit all those staged changes, and the cycle repeats.
+
+#### Add files to staging area
+In order to begin tracking a new file, you use the command <code>git add</code>.
+
+```bash
+$ git add <filename>
+
+$ git add .
+
+$ git add -A
+```
+
+You can add individual files or you can add all the files in the said directory.
+
+:::tip
+A dot or period means to add all the files in the folder/directory.
+:::
+
+You can check the status of the files with [Git Status](#know-status-of-project-files).
+
+#### Remove files from the staging area
+To remove files from the staging area, you can use 
+
+```bash
+git reset
+```
+
+Again, you can check status of the file with [Git Status](#know-status-of-project-files).
+
+#### Commit Files
+You can commit files with <code>git commit</code>.
+
+```bash
+git commit -m "Commit Message"
+```
+
+You can find information on past commits using
+
+```bash
+git log
+```
+
+### Track a remote project
+A remote project is a one that is hosted on some online code repository hosting provider like Github/Gitlab.
+
+#### Clone a project repository
+In order to work locally on a remote project, you need to clone it. A project can be cloned in the following ways 
+
+```bash
+$ git clone <url> /dir/where/repo/will/be/cloned
+
+$ git clone https://github.com/demonkillerr/example.git .
+
+$ git clone /path/tp/directory/remote-repo.git .
+```
+
+:::tip
+The dot/period indicates that you want to clone the repository in the current directory you are in. If you have a specified, you need to specify it instead of the period. For ex
+
+```bash
+git clone https://github.com/demonkillerr/example.git ~/Documents
+```
+:::
+
+#### Viewing information regarding remote repository
+You can view information regarding the remote repository, such as it's origins like this
+
+```bash
+git remote -v
+```
+
+#### Push changes to remote remote repository
