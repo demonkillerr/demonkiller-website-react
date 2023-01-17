@@ -76,6 +76,11 @@ const config = {
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            label: 'Download ALG',
+            href: 'https://sourceforge.net/projects/arch-linux-gui/files/',
+            position: 'left',
+          },
 
 
           {
