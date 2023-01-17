@@ -67,7 +67,7 @@ const sidebars =
     },
     {
       type: 'category',
-      label: 'Programming',
+      label: 'Code',
       link:
       {
         type: 'generated-index',
@@ -78,8 +78,8 @@ const sidebars =
       collapsed: true,
       items: 
       [
-        'programming/langs/git',
-        //'programming/langs/markdown',
+        'code/tools/git',
+        //'code/tools/markdown',
       ],
     },
     // {
