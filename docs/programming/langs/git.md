@@ -254,3 +254,82 @@ git remote -v
 ```
 
 #### Push changes to remote remote repository
+In order to push changes to remote repository we need to
+
+1. Commit changes locally as discussed [above](#track-a-local-project).
+2. Then Push to remote
+
+```bash
+$ git add <filename>
+$ git commit -m "Commit Message"
+```
+
+then
+
+```bash
+$ git pull origin master
+$ git push origin master
+```
+
+## Common Workflow
+What we have discussed till now is the basic of how to use Git in the two most common scenarios. Let's take a look at common workflow most open source projects follow. 
+
+### Creating Branches for a desired feature
+Nearly every VCS has some form of branching support. Branching means you diverge from the main line of development and continue to do work without messing with that main line.
+
+In Git, you can create a branch like this
+
+```bash
+git branch <branch-name>
+```
+
+You can move to this branch from Master by
+
+```bash
+git checkout <branch-name>
+```
+
+#### Pushing new branch to remote
+Till now the new branch that is made is created locally. In order to push the brnach to remote repository we can
+
+```bash
+git push -u origin <branch-name>
+```
+
+You can check the branches locally and remotely using
+
+```bash
+git branch -a
+```
+
+#### Merge Branch to Master
+Once we are done with the development of a said feature on a said branch, we want to merge the changes of this branch with master. We can merge a branch with master like this
+
+```bash
+$ git checkout master #checkout to master branch
+
+$ git pull origin master #pull in changes that might have been made in master 
+
+$ git branch --merged #show previously merged branches
+
+$ git merge <branch-name> #merge branch
+
+$ git push origin master #push to remote
+```
+
+:::tip
+The third step to see merged branches using <code>--merged</code> is optional, but recommended.
+:::
+
+#### Delete merged branch
+Once a branch is merged, it is not required, hence best deleted. You can delete a branch like this
+
+```bash
+$ git branch --merged #check if branch has been merged
+
+$ git branch -d <branch-name> #delete branch locally
+
+$ git branch -a #look for branch in remote
+
+$ git push origin --delete <branch-name> #delete branch from remote repository
+```
