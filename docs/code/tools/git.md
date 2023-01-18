@@ -333,3 +333,80 @@ $ git branch -a #look for branch in remote
 
 $ git push origin --delete <branch-name> #delete branch from remote repository
 ```
+
+### Fixing common mistakes
+We as humans are prone to make errors. In this section we will see how to rectify them.
+
+#### Undo recent changes made to a file
+Undo changes to a file with checkout
+
+```bash
+git checkout <filename>
+```
+
+#### Undoing things
+At any stage, you may want to undo something. One of the common undos takes place when you commit too early and possibly forget to add some
+files, or you mess up your commit message. If you want to redo that commit, make the additional changes you forgot, stage them, and commit again using the <code>--amend</code> option.
+
+```bash
+git commit -amend -m "Commit Message"
+```
+
+:::note
+Changing the commit message will change it's hash as well. Each commit message is part of the commit. Changing it will change the hash as well. This means that the Git history has been modified.
+:::
+
+#### Move commit made in master to another branch
+Sometimes we are working on a feature that was meant to be commited to the feature's branch. But accidently it gets commited to master. To move the commit to the said branch, we can use the cherry-pick command.
+
+Cherry-pick creates a new commit in the said branch based off the original commit. It does not delete the original commit.
+
+```bash
+$ git log #grab the hash (6-7 characters is fine)
+
+$ git checkout <branch-name>
+
+$ git cherry-pick <hash>
+
+$ git log #check new commit (new commit has new hash)
+```
+
+The new feature will be in the said branch. But it is still on the master branch as well. We don't want that, it was never meant to be there. In order to remove the commit from master, we can use the Git reset command.
+
+There are 3 types of reset.
+1. Git reset soft (remove last commit but keeps changes in the staging directory)
+2. Git reset mixed - default (remove last commit, and remove files from the staging area. Files are back in the working directory. Changes are kept.)
+3. Git reset hard (Get rid of all changes till specified commit)
+
+```bash
+$ git checkout master #move to master branch
+
+$ git reset --soft <hash of last desired commit>
+
+$ git reset <hash of last desired commit>
+
+$ git reset --hard <hash of last desired commit>
+```
+
+The reset command will handle tracked files.
+
+#### Getting rid of untracked files
+If we want to clear untracked files, we can use the clean command
+
+```bash
+git clean -df
+```
+
+:::tip
+The <code>-d</code> flag removes untracked directories.
+The <code>-f</code> flag removes untracked files.
+:::
+
+#### Undoing a commit without disturbing Git history
+If a commit that has been pushed to a remote repository, needs to be undone, we can use the Git revert command. The revert command helps in keeping the Git history intact. 
+
+```bash
+git revert <hash of commit>
+```
+
+This will create a new commit based of the previous one with the revert commit message.
