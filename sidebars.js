@@ -91,7 +91,7 @@ const sidebars =
           items: 
           [
             'code/tools/git',
-            //'code/tools/markdown',
+            'code/tools/markdown',
           ],
         },
       ],
