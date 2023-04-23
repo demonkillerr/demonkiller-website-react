@@ -290,7 +290,7 @@ git checkout <branch-name>
 ```
 
 #### Pushing new branch to remote
-Till now the new branch that is made is created locally. In order to push the brnach to remote repository we can
+Till now the new branch that is made is created locally. In order to push the branch to remote repository we can
 
 ```bash
 git push -u origin <branch-name>
