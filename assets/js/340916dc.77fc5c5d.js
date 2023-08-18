@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdemonkiller_portfolio=self.webpackChunkdemonkiller_portfolio||[]).push([[787],{7144:e=>{e.exports=JSON.parse('{"label":"mbt","permalink":"/demonkiller-website-react/blog/tags/mbt","allTagsPath":"/demonkiller-website-react/blog/tags","count":1}')}}]);
