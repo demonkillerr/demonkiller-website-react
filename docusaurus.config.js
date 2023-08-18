@@ -9,7 +9,7 @@ const config = {
   title: 'DemonKiller',
   tagline: 'A place to document all my work',
   url: 'https://demonkillerr.github.io/',
-  baseUrl: '/',
+  baseUrl: '/demonkiller-website-react/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
