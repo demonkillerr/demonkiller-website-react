@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdemonkiller_portfolio=self.webpackChunkdemonkiller_portfolio||[]).push([[159],{2454:e=>{e.exports=JSON.parse('{"permalink":"/demonkiller-website-react/blog/tags/mbt","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

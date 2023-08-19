@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>DemonKiller Blog</title>
-        <link>https://demonkillerr.github.io/demonkiller-website-react/blog</link>
+        <link>https://demonkiller.in/blog</link>
         <description>DemonKiller Blog</description>
         <lastBuildDate>Tue, 25 Oct 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>en</language>
         <item>
             <title><![CDATA[Does Indian Army need a new Main Battle Tank?]]></title>
-            <link>https://demonkillerr.github.io/demonkiller-website-react/blog/does-indian-army-need-a-new-mbt</link>
+            <link>https://demonkiller.in/blog/does-indian-army-need-a-new-mbt</link>
             <guid>does-indian-army-need-a-new-mbt</guid>
             <pubDate>Tue, 25 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[All opinions stated in this article are completely of my own.]]></description>
