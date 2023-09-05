@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'DemonKiller',
   tagline: 'A place to document all my work',
-  url: 'https://demonkiller.tech',
+  url: 'https://demonkiller.in',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -34,6 +34,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsible: true,
+          breadcrumbs: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -60,6 +62,15 @@ const config = {
         sidebar: {
           hideable: true,
         },
+      },
+      // Announcement Bar
+      announcementBar: {
+        id: 'url-change',
+        content:
+          'Please note that my older .tech domain <i>demonkiller.tech</i> expired and hence I have shifted to a newer .in domain, as renewal of the .tech domain was expensive.',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
       },
       navbar: {
         hideOnScroll: true,
