@@ -9,8 +9,6 @@ const config = {
   title: 'DemonKiller',
   tagline: 'A place to document all my work',
   url: 'https://demonkiller.in',
-  tagline: 'Website of DemonKiller',
-  url: 'https://demonkiller.in/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
