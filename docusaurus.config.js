@@ -7,13 +7,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DemonKiller',
-<<<<<<< HEAD
   tagline: 'A place to document all my work',
   url: 'https://demonkiller.in',
-=======
   tagline: 'Website of DemonKiller',
   url: 'https://demonkiller.in/',
->>>>>>> 912dd1ad07cf8c9c9331405637ec1f48920e62ff
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
