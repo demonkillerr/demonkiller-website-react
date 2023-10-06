@@ -1,11 +1,7 @@
 ---
 slug: does-indian-army-need-a-new-mbt
 title: Does Indian Army need a new Main Battle Tank?
-authors:
-  name: DemonKiller
-  title: Open Source Developer
-  url: https://demonkiller.tech
-  image_url: https://github.com/demonkillerr.png
+authors: [demonkiller]
 tags: [blog, tanks, mbt, army]
 ---
 
@@ -14,6 +10,8 @@ All opinions stated in this article are completely of my own.
 So, does the Indian Army need a new main battle tank? The answer is pretty much **yes**, it does. 
 
 A main battle tank fulfills the role of armor-protected direct fire of many modern armies. It is the most important piece of equipment in any modern army. Many countries with tank building histories (such as USA, Russia, Germany, UK, etc) are continously developing advanced technologies, to improve the said vehicle. India operates roughly 5000 tanks today, all of which belong to the soviet/russian T-72 family. Around 2500 are the T72B models *(Ajeya)*, and another 2500 roughly, are T90Ss, known as the *Bhisma*. The T90 is based on the T72 chassis, has modern equiement, and a newer cast hull. Hence it inherits the same types of flaws the T72s have. 
+
+<!--truncate-->
 
 :::note
 
