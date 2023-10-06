@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdemonkiller_portfolio=self.webpackChunkdemonkiller_portfolio||[]).push([[7404],{6716:o=>{o.exports=JSON.parse('{"permalink":"/blog/tags/tui","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
