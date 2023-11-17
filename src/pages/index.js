@@ -10,9 +10,9 @@ import styles from './index.module.css';
 
 
 const ALG_URL =
-  'https://archlinuxgui.in/';
+  'https://arch-linux-gui.github.io/web/';
 const DK_YT_URL =
-  'https://www.youtube.com/c/demonkillerr';
+  'https://www.youtube.com/demonkillerr';
 
 
 // function HomepageHeader() {
