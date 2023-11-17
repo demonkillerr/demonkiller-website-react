@@ -34,6 +34,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           sidebarCollapsible: true,
           breadcrumbs: true,
           // Please change this to your repo.

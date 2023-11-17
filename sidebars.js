@@ -45,7 +45,7 @@ const sidebars =
         description: 'Description and documentation of all of my projects',
         keywords: ['documentation, description'],
       },
-      collapsed: false,
+      collapsed: true,
       items: 
       [
         {
@@ -80,18 +80,18 @@ const sidebars =
       [
         {
           type: 'category',
-          label: 'Tools & Utilities',
+          label: 'Tools',
           link: 
           {
             type: 'generated-index',
-            title: 'Tools & Utilities',
+            title: 'Important Code Utilities',
             description: 'Reference documents for various tools used in the world of code',
             keywords: ['version-control, tools'],
           },
           items: 
           [
             'code/tools/git',
-            //'code/tools/markdown',
+            'code/tools/markdown',
           ],
         },
       ],
