@@ -66,14 +66,14 @@ const config = {
         },
       },
       // Announcement Bar
-      announcementBar: {
-        id: 'url-change',
-        content:
-          'Please note that my older .tech domain <i>demonkiller.tech</i> expired and hence I have shifted to a newer .in domain, as renewal of the .tech domain was expensive.',
-        backgroundColor: '#fafbfc',
-        textColor: '#091E42',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'url-change',
+      //   content:
+      //     'Please note that my older .tech domain <i>demonkiller.tech</i> expired and hence I have shifted to a newer .co.in domain, as renewal of the .tech domain was expensive.',
+      //   backgroundColor: '#fafbfc',
+      //   textColor: '#091E42',
+      //   isCloseable: true,
+      // },
       navbar: {
         hideOnScroll: true,
         title: 'DemonKiller',
