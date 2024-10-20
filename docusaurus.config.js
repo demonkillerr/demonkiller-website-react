@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'DemonKiller',
   tagline: 'A place to document all my work',
-  url: 'https://demonkiller.in',
+  url: 'https://demonkiller.co.uk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
