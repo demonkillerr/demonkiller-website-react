@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdemonkiller_portfolio=self.webpackChunkdemonkiller_portfolio||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Basics of GNU/Linux","permalink":"/blog/linux-basics"},{"title":"Does Indian Army need a new Main Battle Tank?","permalink":"/blog/does-indian-army-need-a-new-mbt"}]}')}}]);
