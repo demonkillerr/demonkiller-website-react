@@ -87,9 +87,9 @@ const config = {
             type: 'doc',
             docId: 'introduction',
             position: 'left',
-            label: 'Docs',
+            label: 'Tutorials',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blogs', position: 'left'},
           {
             label: 'Download ALG',
             href: 'https://sourceforge.net/projects/arch-linux-gui/files/',
@@ -172,7 +172,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Tutorials',
             items: [
               {
                 label: 'Articles',
