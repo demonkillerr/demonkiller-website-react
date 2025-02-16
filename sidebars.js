@@ -103,6 +103,7 @@ const sidebars =
               items: 
               [
                 'code/languages/C/intro',
+                'code/languages/C/setupandfirstprogram',
               ],
             },
           ],
