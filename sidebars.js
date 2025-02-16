@@ -71,7 +71,7 @@ const sidebars =
       link:
       {
         type: 'generated-index',
-        title: 'Langs & Tools',
+        title: 'Languages & Tools',
         description: 'Reference documents for various tools & languages',
         keywords: ['documentation, description'],
       },
@@ -80,13 +80,42 @@ const sidebars =
       [
         {
           type: 'category',
+          label: 'Languages',
+          link: 
+          {
+            type: 'generated-index',
+            title: 'Programming and Scripting Language Reference',
+            description: 'References for Programming & Scripting Languages',
+            keywords: ['C'],
+          },
+          items: 
+          [
+            {
+              type: 'category',
+              label: 'C Tutorial',
+              link: 
+              {
+                type: 'generated-index',
+                title: 'The C Programming Language',
+                description: 'Reference documents for the C programming language',
+                keywords: ['c, functions, make'],
+              },
+              items: 
+              [
+                'code/languages/C/intro',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'Tools',
           link: 
           {
             type: 'generated-index',
             title: 'Important Code Utilities',
             description: 'Reference documents for various tools used in the world of code',
-            keywords: ['version-control, tools'],
+            keywords: ['version-control, markdown, tools'],
           },
           items: 
           [
