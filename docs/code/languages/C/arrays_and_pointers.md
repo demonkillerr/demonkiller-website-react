@@ -94,8 +94,8 @@ int main() {
 
 :::
 
-## Dynamic Memory Allocation (malloc, calloc, free)
-C allows dynamic allocation of memory at runtime using malloc, calloc, and free.
+## Dynamic Memory Allocation
+C allows dynamic allocation of memory at runtime using malloc, calloc, and free. This section just covers it in brief.
 
 ### Allocating Memory with malloc
 Allocates a block of memory without initializing it.
@@ -124,33 +124,6 @@ int main() {
 
 :::
 
-### Allocating Memory with calloc
-
-`calloc` initializes all elements to zero.
-
-```c
-int *arr = (int *)calloc(5, sizeof(int));
-```
-
-:::info
-
-`calloc(n, size)` allocates n elements of size bytes each and initializes them to zero.
-
-:::
-
-### Resizing Memory with realloc
-Expands or shrinks an allocated block dynamically.
-
-```c
-arr = (int *)realloc(arr, 10 * sizeof(int));
-```
-
-:::info
-
-`realloc(ptr, new_size)` resizes previously allocated memory.
-
-:::
-
 ## Common Pitfalls
 ### Pointer Decay
 Arrays decay into pointers when passed to functions, losing their size information.
@@ -162,10 +135,12 @@ Always pass the array size explicitly.
 Failing to free dynamically allocated memory causes memory leaks.
 
 #### Solution: 
-Use free(ptr) after you're done with allocated memory.
+Use `free(ptr)` after you're done with allocated memory.
 
 ### Dangling Pointers
 
 Accessing freed memory results in undefined behavior.
 #### Solution: 
-Set pointers to NULL after free().
+Set pointers to NULL after `free()`.
+
+#### Dynamic Memory allocation has been described in depth in the next chapter.
