@@ -106,3 +106,54 @@ printf("Tab\tSpace\n"); // Adds a tab space
 - The `\t` escape sequence inserts a tab space for indentation.
 
 :::
+
+## Character Inptu & Output using `getchar()` & `putchar()`
+- `getchar()` is used to read a single character from standard input (keyboard).
+- `putchar()` is used to display a single character on the screen.
+
+#### Example:
+```c
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    ch = getchar(); // Reads a single character
+    printf("You entered: ");
+    putchar(ch); // Prints the character
+    printf("\n");
+    return 0;
+}
+```
+
+:::info
+
+- `getchar()` waits for the user to input a character and stores it in ch.
+
+- `putchar()` prints the character stored in ch.
+
+:::
+
+## String Input and Output using `fgets()` and `puts()`
+- `fgets()` is used to read a line of text (string) from standard input.
+- `puts()` is used to print a string with an automatic newline at the end.
+
+#### Example:
+```c
+#include <stdio.h>
+int main() {
+    char name[50];
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin); // Reads a line of text
+    printf("Hello, ");
+    puts(name); // Prints the string with a newline
+    return 0;
+}
+```
+
+:::info
+
+- `fgets()` reads a full line of input and prevents buffer overflow.
+
+- `puts()` prints a string and automatically adds a newline.
+
+:::
