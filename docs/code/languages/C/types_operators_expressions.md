@@ -74,7 +74,7 @@ printf("Sum: %d", sum);
 | Operator | Description | Example |
 |----------|-------------|---------|
 | `&&` | Logical AND | `a > 5 && b < 10` |
-| `||` | Logical OR | `a > 5 || b < 10` |
+| `\|\|` | Logical OR | `a > 5 \|\| b < 10` |
 | `!` | Logical NOT | `!(a > b)` |
 
 #### Example in an if statement
