@@ -1,6 +1,6 @@
 ---
 title: Setup developement environment and first program
-id: setupandfirstprogram
+id: setup_and_first_program
 sidebar_label: Setup & First Program
 ---
 
