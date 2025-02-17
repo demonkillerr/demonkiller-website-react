@@ -235,3 +235,7 @@ In older C books, main is written without *int*. This is because older C compile
 
 #### Return Statement
 Since the type of main() is *int*, it needs to return an integer. The return keyword specifies what the program should return. In this case, we want the program to return 0, which means that it ran successfully.
+
+#### Comments
+A single line comment can be made using `//`. It can be used anywhere, after a statement, or in newline.
+A multiline comment can be made using `/* */`.
