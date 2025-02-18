@@ -1,6 +1,6 @@
 ---
 title: Setup developement environment and first program
-id: setupandfirstprogram
+id: setup_and_first_program
 sidebar_label: Setup & First Program
 ---
 
@@ -212,3 +212,30 @@ make clean
 
 1 directory, 2 files
 ```
+
+### Program Explaination
+
+#### Header File
+```#include <stdio.h>``` is the C standard input and output library. It contains the function declation for the <code>printf()</code> function.
+We will look at this in more details when we cover modular programming.
+
+#### Functions
+This program contains two functions. Functions will be covered later. The two functions are 
+- main()
+- printf()
+
+```main()``` is the starting point of a C program. Every C program should have a main(). It is called at program startup in C. The type of this function in *int*.
+In older C books, main is written without *int*. This is because older C compilers assumed the type of main to be *int*. However, in modern C, it is a good practice to set the type of main to *int*.
+
+
+```printf()``` is a C standard library function that formats text and writes it to standard output.
+
+#### Escape Sequence
+**\n** is a newline escape sequence. It ensures that the next bit of text is printed on the newline.
+
+#### Return Statement
+Since the type of main() is *int*, it needs to return an integer. The return keyword specifies what the program should return. In this case, we want the program to return 0, which means that it ran successfully.
+
+#### Comments
+A single line comment can be made using `//`. It can be used anywhere, after a statement, or in newline.
+A multiline comment can be made using `/* */`.

@@ -92,7 +92,7 @@ const sidebars =
           [
             {
               type: 'category',
-              label: 'C Tutorial',
+              label: 'C',
               link: 
               {
                 type: 'generated-index',
@@ -103,7 +103,28 @@ const sidebars =
               items: 
               [
                 'code/languages/C/intro',
-                'code/languages/C/setupandfirstprogram',
+                'code/languages/C/setup_and_first_program',
+                'code/languages/C/preprocessor',
+                'code/languages/C/types_operators_expression',
+                'code/languages/C/storage_class',
+                'code/languages/C/io',
+                'code/languages/C/control_flow',
+                'code/languages/C/functions',
+                'code/languages/C/recursion',
+                'code/languages/C/pointers',
+                'code/languages/C/pointer_to_function',
+                'code/languages/C/arrays',
+                'code/languages/C/arrays_and_pointers',
+                'code/languages/C/arrays_of_pointers',
+                'code/languages/C/dynamic_mem_alloc',
+                'code/languages/C/strings',
+                'code/languages/C/structs_and_unions',
+                'code/languages/C/modular',
+                'code/languages/C/fileio',
+                'code/languages/C/dynamic_data_structures',
+                'code/languages/C/cli_and_sighandle',
+                'code/languages/C/bit_manip',
+                'code/languages/C/project_1',
               ],
             },
           ],
