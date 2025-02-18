@@ -77,7 +77,7 @@ const config = {
       // },
       navbar: {
         hideOnScroll: true,
-        title: 'DemonKiller',
+        title: 'DMKL',
         logo: {
           alt: 'DemonKiller Logo',
           src: 'img/logo.svg',
