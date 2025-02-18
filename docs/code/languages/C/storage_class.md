@@ -130,3 +130,30 @@ int main() {
 - Cannot take the address (&i is invalid).
 
 :::
+
+## Common Pitfalls and Best Practices
+
+### Using extern Without a Definition
+
+#### Incorrect:
+```c
+extern int value;  // No definition exists
+printf("%d", value);  // Undefined behavior!
+```
+
+#### Solution: 
+Ensure an actual definition exists in another file.
+
+### Misusing static for Memory Optimization
+
+#### Incorrect: 
+Declaring large arrays as static in a recursive function can lead to high memory usage.
+#### Solution: 
+Use dynamic memory (malloc) if needed.
+
+### Overusing register Variables
+
+#### Incorrect: 
+Using register for large variables (e.g., arrays) can be inefficient.
+#### Solution: 
+Only use register for small, frequently accessed variables.
