@@ -135,3 +135,57 @@ printf("Result: %d", x);
 int result = 5 + 3 * 2; // Output: 11
 int correct = (5 + 3) * 2; // Output: 16
 ```
+
+## Type Conversions in C
+
+### Implicit Type Conversion (Type Promotion)
+
+C automatically converts data types when needed.
+```c
+int a = 5;
+double b = a;  // int is promoted to double
+```
+
+### Explicit Type Casting
+```c
+float a = 5.67;
+int b = (int)a;  // Explicit type conversion
+```
+
+## Enumerations (enum)
+
+An enumeration (enum) is a user-defined type consisting of named integer constants.
+
+### Declaring an enum
+```
+enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+};
+```
+
+By default, values start at 0 (SUNDAY = 0, MONDAY = 1, ...).
+
+### Assigning Custom Values
+```c
+enum Status {
+    SUCCESS = 1,
+    FAILURE = 0,
+    PENDING = -1
+};
+```
+
+### Using enum in Code
+```c
+#include <stdio.h>
+int main() {
+    enum Day today = FRIDAY;
+    printf("Today is day number %d\n", today);
+    return 0;
+}
+```
+
+### Benefits of Using enum
+
+- Improves code readability.
+- Reduces the use of magic numbers.
+- Groups related constants under a single type.
