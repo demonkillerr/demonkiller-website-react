@@ -113,7 +113,10 @@ const sidebars =
                 'code/languages/C/pointer_to_function',
                 'code/languages/C/arrays',
                 'code/languages/C/arrays_and_pointers',
+                'code/languages/C/arrays_of_pointers',
                 'code/languages/C/dynamic_mem_alloc',
+                'code/languages/C/strings',
+                'code/languages/C/structs_and_unions',
                 'code/languages/C/modular',
                 
               ],
