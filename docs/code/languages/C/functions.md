@@ -181,3 +181,18 @@ void printMessage() {
     printf("This is a message.\n");
 }
 ```
+
+## `const` in Function Parameters
+Using `const` in function parameters prevents modification of input values.
+
+```c
+void printMessage(const char *msg) {
+    printf("%s\n", msg);
+}
+```
+
+:::info
+
+Prevents accidental modification of the input string. Helps in optimizing the code as the compiler knows the value won’t change.
+
+:::

@@ -41,6 +41,28 @@ int main() {
 - Structures (struct): User-defined data types that group related variables.
 - Enumerations (enum): Used to assign names to integral constants.
 
+## The `const` Keyword (Constant Variables)
+
+The const keyword is used to declare read-only variables, function parameters, and pointers to prevent unintended modifications.
+
+### Declaring `const` Variables
+```c
+const int MAX_VALUE = 100;
+MAX_VALUE = 50;  // ❌ Error: Cannot modify a constant variable
+```
+
+:::info
+
+`const` variables must be initialized at the time of declaration. Attempting to modify them results in a compilation error.
+
+:::
+
+:::tip
+
+It is good practice to name `const` variables in UPPER_CASE.
+
+:::
+
 ## Operators
 Operators allow you to perform operations on variables and values.
 

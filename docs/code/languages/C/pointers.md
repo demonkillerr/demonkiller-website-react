@@ -51,6 +51,20 @@ int main() {
 
 :::
 
+### `const` with Pointers
+| **Declaration** | **Meaning** |
+|----------------|------------|
+| `const int *ptr` | Pointer to a constant integer (cannot modify the value) |
+| `int *const ptr` | Constant pointer to an integer (cannot change the pointer address) |
+| `const int *const ptr` | Constant pointer to a constant integer (neither value nor address can change) |
+
+#### Example
+```c
+const int value = 10;
+const int *ptr = &value;  // Pointer to a constant integer
+*ptr = 20;  // Error: Cannot modify the value
+```
+
 ## NULL Pointers
 A NULL pointer is a pointer that does not point to any valid memory location.
 
