@@ -108,6 +108,7 @@ const sidebars =
                 'code/languages/C/io',
                 'code/languages/C/control_flow',
                 'code/languages/C/functions',
+                'code/languages/C/storage_class',
                 'code/languages/C/recursion',
                 'code/languages/C/pointers',
                 'code/languages/C/pointer_to_function',
@@ -118,7 +119,7 @@ const sidebars =
                 'code/languages/C/strings',
                 'code/languages/C/structs_and_unions',
                 'code/languages/C/modular',
-                
+                'code/languages/C/fileio',
               ],
             },
           ],
