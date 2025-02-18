@@ -104,6 +104,7 @@ const sidebars =
               [
                 'code/languages/C/intro',
                 'code/languages/C/setup_and_first_program',
+                'code/languages/C/preprocessor',
                 'code/languages/C/types_operators_expression',
                 'code/languages/C/io',
                 'code/languages/C/control_flow',
