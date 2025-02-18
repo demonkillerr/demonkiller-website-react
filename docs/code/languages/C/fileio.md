@@ -1,7 +1,7 @@
 ---
 title: File operations in C
 id: fileio
-sidebar_label: Files
+sidebar_label: Files I/O
 ---
 
 This document covers File operations in C.
