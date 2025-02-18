@@ -121,6 +121,8 @@ const sidebars =
                 'code/languages/C/structs_and_unions',
                 'code/languages/C/modular',
                 'code/languages/C/fileio',
+                'code/languages/C/dynamic_data_structures',
+                'code/languages/C/cli_and_sighandle',
               ],
             },
           ],
