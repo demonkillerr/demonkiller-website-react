@@ -1,7 +1,7 @@
 ---
 title: C Preprocessor Directives
 id: preprocessor
-sidebar_label: C Preprocessors
+sidebar_label: Preprocessors Directives
 ---
 
 This document covers preprocessor directives.
