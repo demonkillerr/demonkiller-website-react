@@ -4,6 +4,8 @@ id: arrays_of_pointers
 sidebar_label: Arrays of Pointers
 ---
 
+This document covers Array of Pointers.
+
 An Array of Pointers is an array where each element is a pointer. This allows storing multiple memory addresses instead of actual values, making it useful for managing strings, dynamic arrays, and function pointers.
 
 In this section, we will cover:
