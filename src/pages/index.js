@@ -4,35 +4,11 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
-
-const ALG_URL =
-  'https://arch-linux-gui.github.io/web/';
-const DK_YT_URL =
-  'https://www.youtube.com/demonkillerr';
-
-
-// function HomepageHeader() {
-//   const {siteConfig} = useDocusaurusContext();
-//   return (
-//     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-//       <div className="container">
-//         <h1 className="hero__title">{siteConfig.title}</h1>
-//         <p className="hero__subtitle">{siteConfig.tagline}</p>
-//         <div className={styles.buttons}>
-//           <Link
-//             className="button button--secondary button--lg"
-//             to="/docs/introduction">
-//             Start Reading ⏱️
-//           </Link>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// }
+const ALG_URL = 'https://arkalinuxgui.org';
+const DK_YT_URL = 'https://www.youtube.com/demonkillerr';
 
 function HeroSection() {
   const {siteConfig = {}} = useDocusaurusContext();
@@ -40,33 +16,220 @@ function HeroSection() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <a href={DK_YT_URL} rel="noopener" target="_blank">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-        </a>
-        <img
-          alt={siteConfig.title}
-          className={clsx(styles.heroBannerLogo, 'margin-vert--md')}
-          src={useBaseUrl('img/logo.svg')}
-        />
-        <p className="hero__subtitle">
-          
-          Website of the creator of{' '}
-          <a href={ALG_URL} rel="noopener" target="_blank">
-            Arch Linux GUI <br />
-          </a>
-          {siteConfig.tagline} 
-        </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/introduction">
-            Start Reading ⏱️
-          </Link>
+        <div className={styles.heroContent}>
+          <div className={styles.heroText}>
+            <h1 className="hero__title">{siteConfig.title}</h1>
+            <p className="hero__subtitle">
+              HPC Graduate Student @ University of Edinburgh<br />
+              Open Source Enthusiast & Linux Developer
+            </p>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--primary button--lg"
+                to="/docs/introduction">
+                View My Work 🚀
+              </Link>
+              <a
+                className="button button--secondary button--lg"
+                href={DK_YT_URL}
+                target="_blank"
+                rel="noopener noreferrer">
+                YouTube Channel 📺
+              </a>
+            </div>
+          </div>
+          <div className={styles.heroImage}>
+            <img
+              alt={siteConfig.title}
+              src={useBaseUrl('img/logo.svg')}
+            />
+          </div>
         </div>
-       
-        
       </div>
     </header>
+  );
+}
+
+function SkillsSection() {
+  const skills = [
+    {
+      category: 'High Performance Computing',
+      items: ['Parallel Computing', 'MPI', 'OpenMP', 'SLURM', 'HPC Clusters']
+    },
+    {
+      category: 'System Administration',
+      items: ['Linux Internals', 'Arch Build System', 'System Administration', 'Git Version Control', 'Shell Scripting']
+    },
+    {
+      category: 'Development',
+      items: ['Python', 'C/C++', 'React/Next.js', 'Bash', 'Node.js']
+    }
+  ];
+
+  return (
+    <div className={clsx('padding-vert--xl', styles.section)}>
+      <div className="container">
+        <h2 className="text--center margin-bottom--xl">
+          <span className="badge badge--primary">Technical Skills</span>
+        </h2>
+        <div className="row">
+          {skills.map((skillGroup, idx) => (
+            <div key={idx} className="col col--4">
+              <div className={styles.skillCard}>
+                <h3>{skillGroup.category}</h3>
+                <ul className={styles.skillList}>
+                  {skillGroup.items.map((skill, skillIdx) => (
+                    <li key={skillIdx}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CurrentWork() {
+  return (
+    <div className={clsx('padding-vert--xl', styles.sectionAlt)}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--6">
+            <h2 className="margin-bottom--lg">
+              <span className="badge badge--secondary">Current Focus</span>
+            </h2>
+            <h3 className={styles.sectionTitle}>
+              High Performance Computing at EPCC
+            </h3>
+            <p className={styles.sectionTagline}>
+              Currently pursuing advanced studies in High Performance Computing at the University of Edinburgh's EPCC,
+              focusing on parallel computing, distributed systems, and scientific computing applications.
+              This builds upon my background in system development and open source contributions.
+            </p>
+            <p className={styles.sectionTagline}>
+              My research interests include:
+              <ul>
+                <li>Parallel Computing Optimization</li>
+                <li>Scientific Computing Applications</li>
+                <li>Distributed Systems</li>
+                <li>Linux System Integration</li>
+              </ul>
+            </p>
+            <div className={styles.thesisSection}>
+              <h4>Master's Thesis Research</h4>
+              <p>
+                Working on <strong>Cross-Architecture Analysis of Large Language Model Performance</strong>, 
+                focusing on benchmarking LLaMA 3.1 8B model across diverse hardware architectures. The research 
+                evaluates critical performance metrics such as latency, throughput, memory consumption, and computational cost.
+              </p>
+            </div>
+            <div className={styles.hpcExperience}>
+              <h4>HPC Infrastructure Experience</h4>
+              <p>
+                Through my academic work and research, I have gained hands-on experience with various 
+                world-class supercomputing clusters including - EPCC ARCHER2, EPCC Cirrus, DKRZ Levante, and PSC Bridges-2.
+              </p>
+            </div>
+            
+          </div>
+          <div className="col col--6">
+            <div className={styles.epccImageContainer}>
+              <img
+                src={useBaseUrl('img/epcc.png')}
+                alt="EPCC at University of Edinburgh"
+                className={styles.epccImage}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProjectsSection() {
+  return (
+    <div className={clsx('padding-vert--xl', styles.section)}>
+      <div className="container">
+        <h2 className="text--center margin-bottom--lg">
+          <span className="badge badge--primary">Featured Projects</span>
+        </h2>
+        <div className="row">
+          <div className="col col--6">
+            <div className={styles.projectCard}>
+              <h3>Arch Linux GUI</h3>
+              <p>
+                Created an offline, graphical installer for Arch Linux, making the powerful
+                distribution more accessible to new users while maintaining its core principles.
+              </p>
+              <a href={ALG_URL} className="button button--secondary button--sm" target="_blank" rel="noopener noreferrer">
+                Learn More →
+              </a>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className={styles.projectCard}>
+              <h3>Open Source Contributions</h3>
+              <p>
+                Active contributor to various open source projects, focusing on system integration,
+                Linux development, and educational content creation.
+              </p>
+              <Link to="/docs/introduction" className="button button--secondary button--sm">
+                View Documentation →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DrummerSection() {
+  const drumImages = [
+    {
+      src: 'img/drum1.png',
+      alt: 'Live drumming performance',
+    },
+    {
+      src: 'img/drum3.png',
+      alt: 'Live music show',
+    },
+    {
+      src: 'img/drum4.png',
+      alt: 'Stage performance',
+    },
+  ];
+
+  return (
+    <div className={clsx('padding-vert--xl', styles.section)}>
+      <div className="container">
+        <h2 className="text--center margin-bottom--lg">
+          <span className="badge badge--secondary">Beyond Tech: The Drummer</span>
+        </h2>
+        <div className={styles.drummerIntro}>
+          <p>
+            When I'm not coding or working with high-performance computing systems,
+            you'll find me behind the drum kit. With over 30 performances across
+            indoor venues and arenas, drumming has been my creative outlet and passion.
+          </p>
+        </div>
+        <div className={styles.drumGallery}>
+          {drumImages.map((image, idx) => (
+            <div key={idx} className={styles.drumImageContainer}>
+              <img
+                src={useBaseUrl(image.src)}
+                alt={image.alt}
+                className={styles.drumImage}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -74,74 +237,15 @@ function Home() {
   const {siteConfig = {}} = useDocusaurusContext();
   return (
     <Layout
-      title="Welcome 👋 "
+      title="Welcome 👋"
       description={siteConfig.tagline}>
       <HeroSection />
-      <WhoAmI />
+      <SkillsSection />
+      <CurrentWork />
+      <ProjectsSection />
+      <DrummerSection />
     </Layout>
   );
 }
-
-function WhoAmI() {
-  return (
-    <div className={clsx('padding-vert--xl', styles.sectionAlt)}>
-      <div className="container">
-        <div className="row">
-          <div className="col col--8 col--offset-2">
-            <h2 className="text--center margin-bottom--lg">
-              <span className="badge badge--primary">Who Am I?</span>
-            </h2>
-            <h3
-              className={clsx(
-                'text--center',
-                'margin-bottom--lg',
-                styles.sectionTitle,
-              )}>
-              Open Source enthusiast having more than two years of experiance with 
-              linux based operating systems
-              
-            </h3>
-            <p className={clsx('margin-bottom--lg', styles.sectionTagline)}>
-              I enjoy learning new technologies, 
-              while tinkering with open-source software revolving around linux, and the web. 
-              I also love to play with computer hardware. I have a small 
-              {' '} <strong><a href={DK_YT_URL} rel="noopener" target="_blank">
-                youtube</a></strong> channel, where you can find content regarding the same.
-              <br />
-              <br />
-              For the past two years, I have been working on projects involving 
-              operating systems. My biggest project to date is the {' '}
-              <strong>ALG installer</strong>, an offline, graphical installer
-              for{' '} <strong>Arch Linux</strong>. You can find relevant documentation 
-              regarding it, as well as my other projects, here.
-              <br />
-              <br />
-              Outside of tech, I find myself enjoying music. I can play the drums, and various
-              indian percussion instruments with varying degrees of expertise. I also have been 
-              teaching myself to play the electric guitar, so that I can jam to my favourite songs.
-              <br />
-              <br />
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-// export default function Home() {
-//   const {siteConfig} = useDocusaurusContext();
-//   return (
-//     <Layout
-//       title={`Welcome from ${siteConfig.title}`}
-//       description="DemonKiller's Portfolio & Project Documentation Website">
-      
-//       <main>
-//         <HeroSection />
-//         <HomepageFeatures />
-//       </main>
-//     </Layout>
-//   );
-// }
-
 
 export default Home;
