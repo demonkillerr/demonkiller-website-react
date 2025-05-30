@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://demonkiller.co.uk/blog</id>
-    <title>DemonKiller Blog</title>
+    <title>Gaurang Vishwakarma Blog</title>
     <updated>2023-10-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://demonkiller.co.uk/blog"/>
-    <subtitle>DemonKiller Blog</subtitle>
+    <subtitle>Gaurang Vishwakarma Blog</subtitle>
     <icon>https://demonkiller.co.uk/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Basics of GNU/Linux]]></title>
