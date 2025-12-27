@@ -12,13 +12,31 @@ const config = {
   url: 'https://demonkiller.co.uk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+
+  // Markdown configuration (migrated from deprecated onBrokenMarkdownLinks)
+  markdown: {
+    format: 'mdx',
+    mermaid: true,
+    preprocessor: ({filePath, fileContent}) => fileContent,
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'demonkillerr', // Usually your GitHub org/user name.
   projectName: 'demonkiller-website-react', // Usually your repo name.
+  trailingSlash: false,
+  deploymentBranch: 'gh-pages',
+
+  // Custom domain configuration
+  customFields: {
+    cname: 'demonkiller.co.uk'
+  },
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
