@@ -53,16 +53,16 @@ function HeroSection() {
 function SkillsSection() {
   const skills = [
     {
-      category: 'High Performance Computing',
-      items: ['Parallel Computing', 'MPI', 'OpenMP', 'SLURM', 'HPC Clusters']
+      category: 'AI and ML',
+      items: ['PyTorch', 'LLMs', 'LoRA', 'Fine-Tuning', 'RAG', 'GPU Clusters']
     },
     {
-      category: 'System Administration',
-      items: ['Linux Internals', 'Arch Build System', 'System Administration', 'Git Version Control', 'Shell Scripting']
+      category: 'HPC and System Tools',
+      items: ['MPI', 'Slurm', 'CUDA/ROCm', 'Linux', 'Kubernetes', 'Ansible']
     },
     {
       category: 'Development',
-      items: ['Python', 'C/C++', 'React/Next.js', 'Bash', 'Node.js']
+      items: ['Modern C++', 'Python', 'React/Next + JavaScript', 'Bash Shell Scripting', 'CI/CD', 'Docker/Singularity' ]
     }
   ];
 
