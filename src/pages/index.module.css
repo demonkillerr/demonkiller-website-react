@@ -172,7 +172,7 @@
 }
 
 .heroImage img {
-  max-width: 350px;
+  max-width: 450px;
   height: auto;
   filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.4));
   position: relative;
@@ -315,18 +315,18 @@
 .projectTag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background-color: var(--ifm-color-primary-lightest);
-  color: var(--ifm-color-primary-darkest);
+  background-color: #e5e7eb;
+  color: #1f2937;
   border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 500;
-  border: 1px solid var(--ifm-color-primary-light);
+  border: 1px solid #d1d5db;
 }
 
 [data-theme='dark'] .projectTag {
-  background-color: var(--ifm-color-primary-darkest);
-  color: var(--ifm-color-primary-lightest);
-  border-color: var(--ifm-color-primary-dark);
+  background-color: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
 }
 
 .expertiseSection {

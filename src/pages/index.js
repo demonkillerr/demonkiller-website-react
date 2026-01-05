@@ -34,15 +34,15 @@ function HeroSection() {
             <div className={styles.heroStats}>
               <div className={styles.statItem}>
                 <div className={styles.statNumber}>500K+</div>
-                <div className={styles.statLabel}>Users Worldwide</div>
+                <div className={styles.statLabel}>Project Users Worldwide</div>
               </div>
               <div className={styles.statItem}>
                 <div className={styles.statNumber}>6</div>
-                <div className={styles.statLabel}>HPC Clusters</div>
+                <div className={styles.statLabel}>HPC Clusters worked on</div>
               </div>
               <div className={styles.statItem}>
-                <div className={styles.statNumber}>4+</div>
-                <div className={styles.statLabel}>Years Open Source</div>
+                <div className={styles.statNumber}>5+</div>
+                <div className={styles.statLabel}>Years Open Source Experience</div>
               </div>
             </div>
             <div className={styles.buttons}>
@@ -64,7 +64,7 @@ function HeroSection() {
             <div className={styles.imageWrapper}>
               <img
                 alt={siteConfig.title}
-                src={useBaseUrl('img/logo.svg')}
+                src={useBaseUrl('img/acf.png')}
               />
             </div>
           </div>
@@ -151,10 +151,8 @@ function CurrentWork() {
               Building ML Systems at Scale
             </h3>
             <p className={styles.sectionTagline}>
-              Focused on building and optimizing large-scale machine learning systems, distributed computing infrastructure,
-              and production-grade tooling for high-performance workloads. Extensive experience with modern ML frameworks,
-              container orchestration, and HPC cluster management.
-            </p>
+                Focused on building and optimizing large-scale ML systems, distributed computing infrastructure, and 
+                production-grade tooling for high-performance workloads. Experience spanning modern ML frameworks, container orchestration, and HPC clusters.            </p>
             <div className={styles.expertiseSection}>
               <h4>Core Expertise</h4>
               <ul>
@@ -194,27 +192,27 @@ function CurrentWork() {
 function ProjectsSection() {
   const projects = [
     {
-      title: 'Distributed LLM LoRA Fine-Tuning & Performance Optimization',
-      description: 'Designed and implemented distributed LoRA fine-tuning pipelines for LLaMA-3.1 8B using PyTorch. Orchestrated multi-node training workflows with Bash automation across Slurm and Kubernetes clusters. Containerized workloads with Docker and Singularity for reproducible execution across heterogeneous environments. Conducted comprehensive performance benchmarking across NVIDIA (A100/H100/H200), AMD (MI210/MI300X), and Cerebras CS-3 architectures, analyzing latency, throughput, and memory efficiency.',
+      title: 'LLM LoRA Fine-Tuning & Performance Optimization',
+      description: 'Distributed LoRA fine-tuning pipelines for large language models, optimized for performance across heterogeneous accelerator clusters. Focused on scalable training, reproducibility, and benchmarking across GPU and wafer-scale systems.',
       tags: ['PyTorch', 'Distributed Systems', 'Slurm', 'Kubernetes', 'Docker'],
       link: '/docs/introduction'
     },
     {
-      title: 'Scholar Sense - RAG System',
-      description: 'Built a production-grade Retrieval-Augmented Generation system using Python, Flask, and ChromaDB. Implemented efficient NLP pipelines for document embedding, vector indexing, and LLM-based inference. Deployed with containerized microservices architecture using Docker and Kubernetes for scalability and high availability. Optimized retrieval performance for large document corpora with distributed vector search.',
-      tags: ['Python', 'RAG', 'ChromaDB', 'Flask', 'Kubernetes'],
-      link: '/docs/introduction'
-    },
-    {
       title: 'Arka Linux GUI - Open Source OS',
-      description: 'Led development and maintenance of a complete Linux distribution serving 500,000+ users worldwide. Built core system tooling and GUI components using C++, Qt/QML, Python, and Bash. Designed modular build and release pipelines with CMake and Arch Build System. Engineered robust system services and package management infrastructure. Extensive testing on bare-metal and virtualized environments (KVM/QEMU). Managed community contributions and release cycles.',
+      description: 'Open-source Linux operating system and GUI stack used by 500,000+ users globally as a daily driver. Focused on system reliability, modular build pipelines, and long-term maintainability across diverse hardware. Features a vibrant community on our support platforms.',
       tags: ['C++', 'Qt/QML', 'Python', 'Systems Engineering', 'Open Source'],
       link: ALG_URL,
       external: true
     },
     {
+      title: 'Scholar Sense - RAG System',
+      description: 'Production-grade Retrieval-Augmented Generation (RAG) system for large-scale document analysis. Built scalable NLP pipelines for embedding, indexing, and LLM-based inference using containerized microservices.',
+      tags: ['Python', 'RAG', 'ChromaDB', 'Flask', 'Kubernetes'],
+      link: '/docs/introduction'
+    },
+    {
       title: 'oschat - Real-Time Communication Platform',
-      description: 'Developed a high-performance chat application supporting 1,000+ concurrent WebSocket connections with sub-100ms latency. Built with TypeScript, Next.js, Node.js, and Express. Implemented real-time bidirectional communication using Socket.IO. Deployed on GCP with Kubernetes orchestration for horizontal scaling. Integrated OAuth2 authentication for secure user management. Optimized connection pooling and message delivery for production workloads.',
+      description: 'High-performance real-time communication platform supporting thousands of concurrent WebSocket connections. Designed for low-latency messaging, horizontal scalability, and production cloud deployment.',
       tags: ['TypeScript', 'Next.js', 'WebSocket', 'Kubernetes', 'GCP'],
       link: '/docs/introduction'
     }
@@ -305,7 +303,6 @@ function Home() {
   const {siteConfig = {}} = useDocusaurusContext();
   return (
     <Layout
-      title="Welcome 👋"
       description={siteConfig.tagline}>
       <HeroSection />
       <SkillsSection />
