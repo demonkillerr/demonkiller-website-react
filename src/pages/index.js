@@ -4,6 +4,9 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { SiPytorch, SiPython, SiCplusplus, SiReact, SiJavascript, SiDocker, SiKubernetes, SiAnsible, SiLinux, SiGnubash } from 'react-icons/si';
+import { FaRobot, FaCogs, FaBook, FaBolt, FaChartBar, FaServer, FaMicrochip } from 'react-icons/fa';
+import { MdAutoFixHigh } from 'react-icons/md';
 
 import styles from './index.module.css';
 
@@ -54,15 +57,36 @@ function SkillsSection() {
   const skills = [
     {
       category: 'AI and ML',
-      items: ['PyTorch', 'LLMs', 'LoRA', 'Fine-Tuning', 'RAG', 'GPU Clusters']
+      items: [
+        { name: 'PyTorch', icon: <SiPytorch /> },
+        { name: 'LLMs', icon: <FaRobot /> },
+        { name: 'LoRA', icon: <MdAutoFixHigh /> },
+        { name: 'Fine-Tuning', icon: <FaCogs /> },
+        { name: 'RAG', icon: <FaBook /> },
+        { name: 'GPU Clusters', icon: <FaServer /> }
+      ]
     },
     {
       category: 'HPC and System Tools',
-      items: ['MPI', 'Slurm', 'CUDA/ROCm', 'Linux', 'Kubernetes', 'Ansible']
+      items: [
+        { name: 'MPI', icon: <FaBolt /> },
+        { name: 'Slurm', icon: <FaChartBar /> },
+        { name: 'CUDA/ROCm', icon: <FaMicrochip /> },
+        { name: 'Linux', icon: <SiLinux /> },
+        { name: 'Kubernetes', icon: <SiKubernetes /> },
+        { name: 'Ansible', icon: <SiAnsible /> }
+      ]
     },
     {
       category: 'Development',
-      items: ['Modern C++', 'Python', 'React/Next + JavaScript', 'Bash Shell Scripting', 'CI/CD', 'Docker/Singularity' ]
+      items: [
+        { name: 'Modern C++', icon: <SiCplusplus /> },
+        { name: 'Python', icon: <SiPython /> },
+        { name: 'React/Next + JavaScript', icon: <><SiReact /> <SiJavascript /></> },
+        { name: 'Bash Shell Scripting', icon: <SiGnubash /> },
+        { name: 'CI/CD', icon: <FaBolt /> },
+        { name: 'Docker/Singularity', icon: <SiDocker /> }
+      ]
     }
   ];
 
@@ -79,7 +103,9 @@ function SkillsSection() {
                 <h3>{skillGroup.category}</h3>
                 <ul className={styles.skillList}>
                   {skillGroup.items.map((skill, skillIdx) => (
-                    <li key={skillIdx}>{skill}</li>
+                    <li key={skillIdx}>
+                      <span className={styles.skillIcon}>{skill.icon}</span> {skill.name}
+                    </li>
                   ))}
                 </ul>
               </div>
