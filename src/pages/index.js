@@ -111,10 +111,9 @@ function CurrentWork() {
             <p className={styles.sectionTagline}>
               My research interests include:
               <ul>
-                <li>Parallel Computing Optimization</li>
-                <li>Scientific Computing Applications</li>
-                <li>Distributed Systems</li>
-                <li>Linux System Integration</li>
+                <li>LLM Infrastructure & LLM Architecture</li>
+                <li>Distributed & Parallel Computing</li>
+                <li>Operating Systems</li>
               </ul>
             </p>
             <div className={styles.thesisSection}>
