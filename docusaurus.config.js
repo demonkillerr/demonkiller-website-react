@@ -9,7 +9,7 @@ const darkTheme = themes.dracula;
 const config = {
   title: 'Gaurang Vishwakarma',
   tagline: 'A place to document all my work',
-  url: 'https://demonkiller.co.uk',
+  url: 'https://gaurang.co.uk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -35,7 +35,7 @@ const config = {
 
   // Custom domain configuration
   customFields: {
-    cname: 'demonkiller.co.uk'
+    cname: 'gaurang.co.uk'
   },
 
   // Even if you don't use internalization, you can use this field to set useful
