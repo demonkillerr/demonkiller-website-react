@@ -2,11 +2,333 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaurang.co.uk/blog</id>
     <title>Gaurang Vishwakarma Blog</title>
-    <updated>2023-10-06T00:00:00.000Z</updated>
+    <updated>2025-06-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaurang.co.uk/blog"/>
     <subtitle>Gaurang Vishwakarma Blog</subtitle>
     <icon>https://gaurang.co.uk/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[How Are LLMs Born?]]></title>
+        <id>https://gaurang.co.uk/blog/how-are-llms-born</id>
+        <link href="https://gaurang.co.uk/blog/how-are-llms-born"/>
+        <updated>2025-06-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A layman-friendly look at how Large Language Models are built—from raw data to pre-training, fine-tuning, and inference—plus where HPC fits in.]]></summary>
+        <content type="html"><![CDATA[<p>If you’ve used ChatGPT-like tools, you’ve probably wondered: how does a machine produce answers that <em>sound</em> so human?</p>
+<p>It’s tempting to think an LLM is “thinking” behind the scenes. But the real story is more practical—and more interesting.</p>
+<p>An LLM doesn’t wake up intelligent. It goes through a lifecycle: it’s built, trained, refined, and finally served to users at scale.</p>
+<p><img decoding="async" loading="lazy" src="https://gaurang.co.uk/assets/images/llm-lifecycle-3d01d25547fe011c38d0d1abcebc1a1d.webp" width="2848" height="1596" class="img_ev3q">
+</p><p align="center"><b>FIG 1:</b> A simple view of an LLM lifecycle</p><p></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-what-are-large-language-models-llms">1. What Are Large Language Models (LLMs)?<a href="https://gaurang.co.uk/blog/how-are-llms-born#1-what-are-large-language-models-llms" class="hash-link" aria-label="Direct link to 1. What Are Large Language Models (LLMs)?" title="Direct link to 1. What Are Large Language Models (LLMs)?" translate="no">​</a></h2>
+<p>In one sentence:</p>
+<p><strong>Large Language Models (LLMs) are AI systems trained to understand and generate human-like text.</strong></p>
+<p>That sounds magical, so it helps to be clear about what they <em>don’t</em> do:</p>
+<ul>
+<li class="">They don’t <strong>think</strong> the way humans do.</li>
+<li class="">They don’t <strong>understand</strong> meaning the way humans do.</li>
+<li class="">They’re incredibly good at recognizing <strong>patterns in language</strong>.</li>
+</ul>
+<p>A helpful analogy is: an LLM is like someone who has read a huge chunk of the internet (books, articles, forums, code), and can continue a piece of text in a way that statistically fits.</p>
+<p>It’s not “a mind.” It’s a very large pattern-learning system.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-why-do-llms-need-a-lifecycle">2. Why Do LLMs Need a “Lifecycle”?<a href="https://gaurang.co.uk/blog/how-are-llms-born#2-why-do-llms-need-a-lifecycle" class="hash-link" aria-label="Direct link to 2. Why Do LLMs Need a “Lifecycle”?" title="Direct link to 2. Why Do LLMs Need a “Lifecycle”?" translate="no">​</a></h2>
+<p>Humans learn in stages:</p>
+<ul>
+<li class="">We absorb language over years.</li>
+<li class="">We practice.</li>
+<li class="">We get corrected.</li>
+<li class="">We learn what’s appropriate in different contexts.</li>
+</ul>
+<p>LLMs also need stages. You can’t jump straight to “being helpful” without building foundations.</p>
+<p>One simple way to think about it is:</p>
+<p><strong>Born → educated → trained → deployed</strong></p>
+<p>The next sections walk through that journey without heavy math.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-step-1-gathering-the-raw-material--data">3. Step 1: Gathering the Raw Material — Data<a href="https://gaurang.co.uk/blog/how-are-llms-born#3-step-1-gathering-the-raw-material--data" class="hash-link" aria-label="Direct link to 3. Step 1: Gathering the Raw Material — Data" title="Direct link to 3. Step 1: Gathering the Raw Material — Data" translate="no">​</a></h2>
+<p>LLMs are trained on large collections of text, such as:</p>
+<ul>
+<li class="">books</li>
+<li class="">articles</li>
+<li class="">websites</li>
+<li class="">code</li>
+</ul>
+<p>Two things matter a lot here:</p>
+<ul>
+<li class=""><strong>Quantity</strong>: more exposure helps the model learn more patterns.</li>
+<li class=""><strong>Quality</strong>: clean, diverse, and well-curated data generally produces better results.</li>
+</ul>
+<p>One important clarification:</p>
+<p><strong>LLMs don’t “store” documents like a search engine.</strong></p>
+<p>Instead, they learn general patterns from the data.</p>
+<p>An analogy: it’s like reading millions of books and becoming good at writing and summarizing—without memorizing exact sentences to quote on demand.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-step-2-pre-training--learning-language-from-scratch">4. Step 2: Pre-Training — Learning Language from Scratch<a href="https://gaurang.co.uk/blog/how-are-llms-born#4-step-2-pre-training--learning-language-from-scratch" class="hash-link" aria-label="Direct link to 4. Step 2: Pre-Training — Learning Language from Scratch" title="Direct link to 4. Step 2: Pre-Training — Learning Language from Scratch" translate="no">​</a></h2>
+<p>Pre-training is where the model learns the basics of language:</p>
+<ul>
+<li class="">grammar and sentence structure</li>
+<li class="">which words tend to appear together</li>
+<li class="">how paragraphs flow</li>
+<li class="">patterns across many writing styles</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-word-prediction-plain-english">Next-word prediction (plain English)<a href="https://gaurang.co.uk/blog/how-are-llms-born#next-word-prediction-plain-english" class="hash-link" aria-label="Direct link to Next-word prediction (plain English)" title="Direct link to Next-word prediction (plain English)" translate="no">​</a></h3>
+<p>At its core, pre-training often looks like this:</p>
+<p>You give the model some text, and it learns to predict what comes next.</p>
+<p>If you type:</p>
+<p>“The cat sat on the”</p>
+<p>…a model that has seen lots of language will guess something like “mat” is likely.</p>
+<p>Scale that up across massive datasets, and the model becomes surprisingly capable.</p>
+<p>But here’s the key idea:</p>
+<p><strong>Pre-training teaches how language works, not how to behave.</strong></p>
+<p>So a pre-trained model might be great at completing text, but not automatically great at being safe, accurate, or helpful.</p>
+<p><img decoding="async" loading="lazy" src="https://gaurang.co.uk/assets/images/pre-training-ac7e8b95037240b10e62dfd3116034e2.jpg" width="1600" height="436" class="img_ev3q">
+</p><p align="center"><b>FIG 2:</b> Pre-training builds the language foundation</p><p></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-step-3-fine-tuning--learning-to-be-useful">5. Step 3: Fine-Tuning — Learning to Be Useful<a href="https://gaurang.co.uk/blog/how-are-llms-born#5-step-3-fine-tuning--learning-to-be-useful" class="hash-link" aria-label="Direct link to 5. Step 3: Fine-Tuning — Learning to Be Useful" title="Direct link to 5. Step 3: Fine-Tuning — Learning to Be Useful" translate="no">​</a></h2>
+<p>After pre-training, a model often needs refinement to become the assistant-like tool people expect.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="instruction-fine-tuning">Instruction Fine-Tuning<a href="https://gaurang.co.uk/blog/how-are-llms-born#instruction-fine-tuning" class="hash-link" aria-label="Direct link to Instruction Fine-Tuning" title="Direct link to Instruction Fine-Tuning" translate="no">​</a></h3>
+<p>This stage teaches the model to behave more like a helpful assistant:</p>
+<ul>
+<li class="">answer questions more directly</li>
+<li class="">follow prompts and instructions</li>
+<li class="">stay on topic</li>
+<li class="">format responses clearly</li>
+</ul>
+<p>You can think of it as: “Okay, you learned language. Now learn how to use it in a helpful way.”</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="human-feedback--safety">Human Feedback &amp; Safety<a href="https://gaurang.co.uk/blog/how-are-llms-born#human-feedback--safety" class="hash-link" aria-label="Direct link to Human Feedback &amp; Safety" title="Direct link to Human Feedback &amp; Safety" translate="no">​</a></h3>
+<p>Another common refinement step involves humans evaluating outputs.</p>
+<p>Humans might rate multiple answers and indicate which one is:</p>
+<ul>
+<li class="">more helpful</li>
+<li class="">more accurate</li>
+<li class="">less harmful</li>
+<li class="">safer and more appropriate</li>
+</ul>
+<p>The model then learns to prefer the better behaviors.</p>
+<p>An analogy: after years of self-study, a coach helps you correct bad habits and practice the kind of responses people actually need.</p>
+<p><img decoding="async" loading="lazy" src="https://gaurang.co.uk/assets/images/pre-training-vs-fine-tuning-1dc1aa1c4371f704873ec5d9952a5663.png" width="1280" height="719" class="img_ev3q">
+</p><p align="center"><b>FIG 3:</b> Pre-training vs fine-tuning (conceptual)</p><p></p>
+<p><img decoding="async" loading="lazy" src="https://gaurang.co.uk/assets/images/finetuning-1-8283a778655d74f535db72f790e152d0.png" width="1249" height="520" class="img_ev3q">
+</p><p align="center"><b>FIG 4:</b> Fine-tuning shapes the model into an assistant</p><p></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="6-step-4-inference--when-you-talk-to-the-model">6. Step 4: Inference — When You Talk to the Model<a href="https://gaurang.co.uk/blog/how-are-llms-born#6-step-4-inference--when-you-talk-to-the-model" class="hash-link" aria-label="Direct link to 6. Step 4: Inference — When You Talk to the Model" title="Direct link to 6. Step 4: Inference — When You Talk to the Model" translate="no">​</a></h2>
+<p>Inference is the “live” phase: the model is deployed, and you interact with it.</p>
+<p>When you type a prompt, the model:</p>
+<ol>
+<li class="">looks at your text</li>
+<li class="">predicts the next word (more precisely: the next small chunk of text)</li>
+<li class="">adds it to the response</li>
+<li class="">repeats this many times until it finishes</li>
+</ol>
+<p>This happens fast, but it’s still the same idea: <strong>predict the next piece of text, over and over</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="myth-busting-does-it-learn-from-your-message">Myth-busting: does it learn from your message?<a href="https://gaurang.co.uk/blog/how-are-llms-born#myth-busting-does-it-learn-from-your-message" class="hash-link" aria-label="Direct link to Myth-busting: does it learn from your message?" title="Direct link to Myth-busting: does it learn from your message?" translate="no">​</a></h3>
+<p>Usually, no.</p>
+<p>In most deployments, your chat message does not instantly “train” the model.</p>
+<p>What you’re interacting with is typically a <strong>frozen</strong> model: its knowledge and behavior are set by training done earlier. (Some systems may log data for future improvements, but that’s not the same as instant learning inside your conversation.)</p>
+<p><img decoding="async" loading="lazy" src="https://gaurang.co.uk/assets/images/inference-1-2aa7fa141fbd739a61d106ff65a9b5ef.png" width="850" height="264" class="img_ev3q">
+</p><p align="center"><b>FIG 5:</b> Inference is the live prediction loop</p><p></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="7-where-high-performance-computing-hpc-fits-in">7. Where High Performance Computing (HPC) Fits In<a href="https://gaurang.co.uk/blog/how-are-llms-born#7-where-high-performance-computing-hpc-fits-in" class="hash-link" aria-label="Direct link to 7. Where High Performance Computing (HPC) Fits In" title="Direct link to 7. Where High Performance Computing (HPC) Fits In" translate="no">​</a></h2>
+<p>If the lifecycle so far sounds expensive—you’re right.</p>
+<p>Training LLMs is not something a single computer can realistically do at modern scales.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-training-needs-hpc">Why training needs HPC<a href="https://gaurang.co.uk/blog/how-are-llms-born#why-training-needs-hpc" class="hash-link" aria-label="Direct link to Why training needs HPC" title="Direct link to Why training needs HPC" translate="no">​</a></h3>
+<p>Training typically requires:</p>
+<ul>
+<li class=""><strong>thousands of GPUs</strong> working in parallel</li>
+<li class=""><strong>massive memory</strong> to hold model parameters and training state</li>
+<li class=""><strong>weeks or months</strong> of computation</li>
+<li class="">reliable storage and fast networking to keep all the machines coordinated</li>
+</ul>
+<p>Even fine-tuning and inference benefit from the same HPC ideas:</p>
+<ul>
+<li class=""><strong>speed</strong> (people expect low latency)</li>
+<li class=""><strong>scale</strong> (many users at once)</li>
+<li class=""><strong>reliability</strong> (services must stay up)</li>
+</ul>
+<p>That’s why it’s fair to say:</p>
+<p><strong>Modern LLMs are basically impossible without HPC.</strong></p>
+<p>Whether it’s a supercomputer in a research center or a large GPU cluster in a data center, the challenges are similar: performance, coordination, power usage, and cooling.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="8-why-understanding-this-matters">8. Why Understanding This Matters<a href="https://gaurang.co.uk/blog/how-are-llms-born#8-why-understanding-this-matters" class="hash-link" aria-label="Direct link to 8. Why Understanding This Matters" title="Direct link to 8. Why Understanding This Matters" translate="no">​</a></h2>
+<p>Knowing the lifecycle helps you use AI more wisely.</p>
+<p>For individuals, it helps you:</p>
+<ul>
+<li class="">trust AI appropriately (it can be useful without being “a mind”)</li>
+<li class="">understand limitations (it can be confidently wrong)</li>
+<li class="">write better prompts (you’re steering a text generator, not querying a database)</li>
+</ul>
+<p>For society, it helps us:</p>
+<ul>
+<li class="">ask better questions about how these systems should be built and deployed</li>
+<li class="">demand safer behavior and clearer accountability</li>
+<li class="">avoid treating AI as magic</li>
+</ul>
+<p>LLMs aren’t magic — they’re engineered systems built in stages.</p>
+<p>And once you see those stages clearly, the technology becomes less mysterious—and easier to evaluate.</p>]]></content>
+        <author>
+            <name>DemonKiller</name>
+            <uri>https://demonkiller.in</uri>
+        </author>
+        <category label="ai" term="ai"/>
+        <category label="llm" term="llm"/>
+        <category label="nlp" term="nlp"/>
+        <category label="hpc" term="hpc"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is High Performance Computing]]></title>
+        <id>https://gaurang.co.uk/blog/what-is-high-performance-computing</id>
+        <link href="https://gaurang.co.uk/blog/what-is-high-performance-computing"/>
+        <updated>2024-05-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[High Performance Computing (HPC) is how thousands of computers work together to solve problems too big, too fast, or too complex for a single machine.]]></summary>
+        <content type="html"><![CDATA[<p>Some problems look simple on the surface, but they hide an uncomfortable truth: one computer just isn’t enough.</p>
+<p>Think about <strong>weather prediction</strong>. It’s not “will it rain tomorrow?” It’s: how do temperature, pressure, humidity, wind, oceans, mountains, and sunlight interact over time—across an entire planet—minute by minute?</p>
+<p>Or consider <strong>Google Maps traffic updates</strong>. You’re not only asking for the shortest route. You’re asking for the best route <em>right now</em>, while accidents happen, roads close, traffic lights change, and millions of other drivers make decisions at the same time.</p>
+<p>Even <strong>Netflix recommendations</strong> are a massive puzzle: millions of users, huge libraries of content, and constantly changing behavior. The system has to learn patterns quickly and update predictions continuously.</p>
+<p>These aren’t “hard” because the idea is complicated. They’re hard because they’re <strong>too big</strong>, <strong>too fast</strong>, or <strong>too complex</strong> for one machine to keep up.</p>
+<p>So here’s the question that leads to High Performance Computing:</p>
+<p>What if <strong>thousands of computers</strong> could work together like one?</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-do-we-mean-by-high-performance-computing">What Do We Mean by “High Performance Computing”?<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#what-do-we-mean-by-high-performance-computing" class="hash-link" aria-label="Direct link to What Do We Mean by “High Performance Computing”?" title="Direct link to What Do We Mean by “High Performance Computing”?" translate="no">​</a></h2>
+<p>In one sentence:</p>
+<p><strong>High Performance Computing (HPC) is the use of many powerful computers working together to solve problems extremely fast.</strong></p>
+<p>There are three ideas hiding inside that sentence:</p>
+<ul>
+<li class=""><strong>Speed</strong>: finish work faster than a normal computer could.</li>
+<li class=""><strong>Scale</strong>: handle problems that are too large for one machine.</li>
+<li class=""><strong>Teamwork</strong>: many computers cooperate, not just one “super fast” box.</li>
+</ul>
+<p>HPC is <em>not</em> the same thing as owning a high-end gaming PC or an expensive laptop. Those machines can be very fast, but they’re still usually a <strong>single computer</strong> trying to do everything alone.</p>
+<p>HPC is about <strong>many computers</strong> acting like a coordinated team.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-is-hpc-different-from-a-normal-computer">How Is HPC Different from a Normal Computer?<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#how-is-hpc-different-from-a-normal-computer" class="hash-link" aria-label="Direct link to How Is HPC Different from a Normal Computer?" title="Direct link to How Is HPC Different from a Normal Computer?" translate="no">​</a></h2>
+<p>A normal computer (like a laptop) is designed for versatility:</p>
+<ul>
+<li class="">browsing the web</li>
+<li class="">writing code</li>
+<li class="">playing games</li>
+<li class="">editing photos</li>
+<li class="">running everyday apps</li>
+</ul>
+<p>HPC systems are designed for one goal: <strong>solve large computational problems efficiently</strong>.</p>
+<p>A useful mental picture is:</p>
+<ul>
+<li class="">A laptop is like <strong>one brain</strong> working carefully.</li>
+<li class="">HPC is like a <strong>stadium full of brains</strong> working on the same task.</li>
+</ul>
+<p>What makes HPC feel different (conceptually) is that it usually has:</p>
+<ul>
+<li class=""><strong>A lot of processors working at once</strong> (many “workers” instead of one).</li>
+<li class=""><strong>A lot of memory</strong> (so it can hold huge datasets while thinking).</li>
+<li class=""><strong>Serious power and cooling</strong> (because doing intense work at scale creates heat).</li>
+</ul>
+<p>You don’t need to memorize specs to understand HPC. The key is to recognize that HPC is built to do one thing exceptionally well: <strong>compute at scale</strong>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-hpc-actually-work-without-the-scary-math">How Does HPC Actually Work? (Without the Scary Math)<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#how-does-hpc-actually-work-without-the-scary-math" class="hash-link" aria-label="Direct link to How Does HPC Actually Work? (Without the Scary Math)" title="Direct link to How Does HPC Actually Work? (Without the Scary Math)" translate="no">​</a></h2>
+<p>The core trick behind HPC is simple:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="parallel-work">Parallel work<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#parallel-work" class="hash-link" aria-label="Direct link to Parallel work" title="Direct link to Parallel work" translate="no">​</a></h3>
+<p>Imagine you have to wash 1,000 dishes.</p>
+<ul>
+<li class="">One person can wash all 1,000 dishes alone. It works, but it takes time.</li>
+<li class="">Or you can have 1,000 people each wash one dish. The job finishes much faster.</li>
+</ul>
+<p>That’s the basic idea of HPC: <strong>parallelism</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-three-step-loop">The three-step loop<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#the-three-step-loop" class="hash-link" aria-label="Direct link to The three-step loop" title="Direct link to The three-step loop" translate="no">​</a></h3>
+<p>Most HPC jobs follow a pattern like this:</p>
+<ol>
+<li class=""><strong>Split the problem</strong> into smaller pieces.</li>
+<li class=""><strong>Solve the pieces</strong> at the same time on many computers.</li>
+<li class=""><strong>Combine the results</strong> into one final answer.</li>
+</ol>
+<p>This sounds easy until you remember the hardest part: <strong>coordination</strong>.</p>
+<p>If the pieces don’t fit together cleanly, or if some workers finish early and others are slow, the whole system can waste time. In HPC, a lot of effort goes into making sure the team works smoothly—like a well-run factory line or a well-coached sports team.</p>
+<p>(If you’ve heard terms like “message passing” or “MPI,” that’s part of how computers coordinate. You don’t need to know the details to understand the big picture: cooperation matters.)</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="where-is-hpc-used-in-the-real-world">Where Is HPC Used in the Real World?<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#where-is-hpc-used-in-the-real-world" class="hash-link" aria-label="Direct link to Where Is HPC Used in the Real World?" title="Direct link to Where Is HPC Used in the Real World?" translate="no">​</a></h2>
+<p>HPC is one of those technologies that’s everywhere, even if you don’t notice it.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="weather--climate">Weather &amp; Climate<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#weather--climate" class="hash-link" aria-label="Direct link to Weather &amp; Climate" title="Direct link to Weather &amp; Climate" translate="no">​</a></h3>
+<ul>
+<li class="">Forecasting storms and extreme weather</li>
+<li class="">Running climate models to understand long-term change</li>
+<li class="">Simulating how oceans and atmosphere interact</li>
+</ul>
+<p>This is one of the classic HPC use cases because the Earth is huge, the physics is complex, and predictions need to be fast.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="healthcare">Healthcare<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#healthcare" class="hash-link" aria-label="Direct link to Healthcare" title="Direct link to Healthcare" translate="no">​</a></h3>
+<ul>
+<li class="">Searching for promising drug candidates</li>
+<li class="">Analyzing genomes</li>
+<li class="">Modeling proteins and biological systems</li>
+</ul>
+<p>HPC helps researchers explore possibilities faster than lab work alone, narrowing down what to test in the real world.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="engineering">Engineering<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#engineering" class="hash-link" aria-label="Direct link to Engineering" title="Direct link to Engineering" translate="no">​</a></h3>
+<ul>
+<li class="">Simulating airplane wings before building prototypes</li>
+<li class="">Running car crash simulations safely in software</li>
+<li class="">Testing materials under stress, heat, or pressure</li>
+</ul>
+<p>Instead of building and breaking thousands of physical prototypes, engineers can simulate many designs and only build the most promising ones.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="finance">Finance<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#finance" class="hash-link" aria-label="Direct link to Finance" title="Direct link to Finance" translate="no">​</a></h3>
+<ul>
+<li class="">Risk analysis</li>
+<li class="">Fraud detection</li>
+<li class="">Running large “what if?” scenarios</li>
+</ul>
+<p>Financial systems can be extremely data-heavy and time-sensitive, especially when decisions need to be made quickly.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="ai--machine-learning">AI &amp; Machine Learning<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#ai--machine-learning" class="hash-link" aria-label="Direct link to AI &amp; Machine Learning" title="Direct link to AI &amp; Machine Learning" translate="no">​</a></h3>
+<ul>
+<li class="">Training large models</li>
+<li class="">Running experiments faster</li>
+<li class="">Processing huge datasets efficiently</li>
+</ul>
+<p>Even though AI often gets discussed separately, many large AI workloads depend on the same core idea: do a lot of computation in parallel.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="movies--games">Movies &amp; Games<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#movies--games" class="hash-link" aria-label="Direct link to Movies &amp; Games" title="Direct link to Movies &amp; Games" translate="no">​</a></h3>
+<ul>
+<li class="">Rendering CGI and visual effects</li>
+<li class="">Simulating explosions, smoke, water, crowds</li>
+<li class="">Producing frames faster for big productions</li>
+</ul>
+<p>A single movie scene can require enormous computation. HPC (and related large-scale compute farms) makes it practical.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="supercomputers-the-giants-behind-hpc">Supercomputers: The Giants Behind HPC<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#supercomputers-the-giants-behind-hpc" class="hash-link" aria-label="Direct link to Supercomputers: The Giants Behind HPC" title="Direct link to Supercomputers: The Giants Behind HPC" translate="no">​</a></h2>
+<p>When people hear “HPC,” they often think of <strong>supercomputers</strong>.</p>
+<p>A <strong>supercomputer</strong> is basically a very large HPC system—many computers connected together, designed to act like one giant machine for large tasks.</p>
+<p>In simple terms:</p>
+<ul>
+<li class="">They usually live in <strong>data centers</strong>.</li>
+<li class="">They consume <strong>enormous power</strong>.</li>
+<li class="">They require <strong>serious cooling</strong>.</li>
+<li class="">They’re often <strong>ranked globally</strong>, and countries invest heavily in them.</li>
+</ul>
+<p>Why? Because supercomputers are strategic. They help with science, national infrastructure, industry, and innovation.</p>
+<p>One fact that captures the scale:</p>
+<p>The world’s fastest supercomputers can perform <strong>quintillions of calculations per second</strong>.</p>
+<p>Even if you never touch a supercomputer directly, the work done on these systems can shape technologies and decisions that affect everyday life.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-hpc-matters-more-than-ever-today">Why HPC Matters More Than Ever Today<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#why-hpc-matters-more-than-ever-today" class="hash-link" aria-label="Direct link to Why HPC Matters More Than Ever Today" title="Direct link to Why HPC Matters More Than Ever Today" translate="no">​</a></h2>
+<p>HPC isn’t just a “nice to have” for big labs. It’s becoming more important because of a few major trends:</p>
+<ul>
+<li class=""><strong>Explosion of data</strong>: sensors, satellites, logs, experiments, and digital systems generate more data than ever.</li>
+<li class=""><strong>Climate challenges</strong>: understanding and responding to climate change requires large, accurate simulations.</li>
+<li class=""><strong>AI boom</strong>: training and evaluating modern models is computationally intense.</li>
+<li class=""><strong>Scientific urgency</strong>: pandemics, energy systems, sustainability, and materials research all benefit from faster computation.</li>
+</ul>
+<p>A lot of modern breakthroughs are not blocked by ideas—they’re blocked by the ability to test and simulate at scale.</p>
+<p>HPC removes that bottleneck.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="is-hpc-only-for-scientists">Is HPC Only for Scientists?<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#is-hpc-only-for-scientists" class="hash-link" aria-label="Direct link to Is HPC Only for Scientists?" title="Direct link to Is HPC Only for Scientists?" translate="no">​</a></h2>
+<p>It used to feel that way, because early HPC systems were expensive and limited to national labs or large universities.</p>
+<p>Today, it’s broader:</p>
+<ul>
+<li class=""><strong>Universities</strong> use HPC for research and teaching.</li>
+<li class=""><strong>Startups</strong> use HPC to prototype faster.</li>
+<li class=""><strong>Governments</strong> use HPC for planning, defense, and infrastructure.</li>
+<li class=""><strong>Companies</strong> use HPC for engineering, analytics, and AI.</li>
+</ul>
+<p>And importantly: <strong>cloud HPC exists</strong>.</p>
+<p>Instead of buying your own cluster, you can rent large-scale computing for the hours you need it. That lowers the barrier for teams that want power without owning the hardware.</p>
+<p>HPC is also a career space (without being overly niche):</p>
+<ul>
+<li class="">engineers who build and maintain systems</li>
+<li class="">researchers who run simulations</li>
+<li class="">data scientists who process large datasets</li>
+<li class="">developers who optimize software for parallel workloads</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="final-thoughts-hpc-as-the-invisible-engine-of-progress">Final Thoughts: HPC as the Invisible Engine of Progress<a href="https://gaurang.co.uk/blog/what-is-high-performance-computing#final-thoughts-hpc-as-the-invisible-engine-of-progress" class="hash-link" aria-label="Direct link to Final Thoughts: HPC as the Invisible Engine of Progress" title="Direct link to Final Thoughts: HPC as the Invisible Engine of Progress" translate="no">​</a></h2>
+<p>High Performance Computing is a simple idea with huge impact: <strong>many computers working together to solve problems that one computer can’t handle alone</strong>.</p>
+<p>It quietly powers some of the most important decisions and discoveries of our time—from forecasting storms to designing safer vehicles to training modern AI systems.</p>
+<p>You may never see a supercomputer — but you benefit from it every day.</p>]]></content>
+        <author>
+            <name>DemonKiller</name>
+            <uri>https://demonkiller.in</uri>
+        </author>
+        <category label="hpc" term="hpc"/>
+        <category label="supercomputing" term="supercomputing"/>
+        <category label="parallel-computing" term="parallel-computing"/>
+        <category label="computing" term="computing"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Basics of GNU/Linux]]></title>
         <id>https://gaurang.co.uk/blog/linux-basics</id>
