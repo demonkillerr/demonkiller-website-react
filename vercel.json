@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://gaurang.co.uk/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "demonkiller.co.uk"
+        }
+      ]
+    }
+  ]
+}

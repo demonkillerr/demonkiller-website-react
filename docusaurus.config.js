@@ -8,7 +8,7 @@ const darkTheme = themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gaurang Vishwakarma',
-  tagline: 'A place to document all my work',
+  tagline: 'Infrastructure Engineer — HPC & AI/ML infrastructure, Linux systems, and open source',
   url: 'https://gaurang.co.uk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
