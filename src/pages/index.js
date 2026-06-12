@@ -4,9 +4,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { SiPytorch, SiPython, SiCplusplus, SiReact, SiJavascript, SiDocker, SiKubernetes, SiAnsible, SiLinux, SiGnubash } from 'react-icons/si';
-import { FaRobot, FaCogs, FaBook, FaBolt, FaChartBar, FaServer, FaMicrochip } from 'react-icons/fa';
-import { MdAutoFixHigh } from 'react-icons/md';
+import { SiPython, SiCplusplus, SiDocker, SiKubernetes, SiAnsible, SiLinux, SiGnubash, SiRedhat } from 'react-icons/si';
+import { FaCogs, FaBolt, FaChartBar, FaServer, FaMicrochip, FaNetworkWired, FaDatabase, FaTerminal, FaGraduationCap, FaCertificate } from 'react-icons/fa';
 
 import styles from './index.module.css';
 
@@ -22,14 +21,14 @@ function HeroSection() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <div className={styles.roleTag}>
-              <span>👨‍💻 Software Engineer</span>
+              <span>🛠️ Infrastructure Engineer</span>
             </div>
             <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.title}</h1>
             <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
-              Specializing in <span className={styles.highlight}>ML Systems</span>, <span className={styles.highlight}>Distributed Systems</span>, and <span className={styles.highlight}>Infrastructure</span>
+              Specializing in <span className={styles.highlight}>HPC</span>, <span className={styles.highlight}>AI/ML Infrastructure</span>, and <span className={styles.highlight}>Linux Systems</span>
             </p>
             <p className={styles.heroDescription}>
-              Production C++ & Python • Distributed LLM Training • Kubernetes & HPC • Open Source Systems at Scale
+              MSc in High Performance Computing, EPCC, University of Edinburgh • Red Hat Certified System Administrator (RHCSA) • Slurm & Kubernetes • InfiniBand/RDMA & Lustre
             </p>
             <div className={styles.heroStats}>
               <div className={styles.statItem}>
@@ -77,36 +76,36 @@ function HeroSection() {
 function SkillsSection() {
   const skills = [
     {
-      category: 'AI and ML',
+      category: 'HPC & AI/ML Infrastructure',
       items: [
-        { name: 'PyTorch', icon: <SiPytorch /> },
-        { name: 'LLMs', icon: <FaRobot /> },
-        { name: 'LoRA', icon: <MdAutoFixHigh /> },
-        { name: 'Fine-Tuning', icon: <FaCogs /> },
-        { name: 'RAG', icon: <FaBook /> },
-        { name: 'GPU Clusters', icon: <FaServer /> }
+        { name: 'Slurm (QoS, Gres, Fairshare)', icon: <FaChartBar /> },
+        { name: 'Kubernetes / Kueue', icon: <SiKubernetes /> },
+        { name: 'MPI / OpenMP', icon: <FaBolt /> },
+        { name: 'Lustre / GPFS', icon: <FaDatabase /> },
+        { name: 'NVIDIA, AMD & Cerebras Accelerators', icon: <FaMicrochip /> },
+        { name: 'Base Command Manager', icon: <FaServer /> }
       ]
     },
     {
-      category: 'HPC and System Tools',
+      category: 'Linux System Administration',
       items: [
-        { name: 'MPI', icon: <FaBolt /> },
-        { name: 'Slurm', icon: <FaChartBar /> },
-        { name: 'CUDA/ROCm', icon: <FaMicrochip /> },
-        { name: 'Linux', icon: <SiLinux /> },
-        { name: 'Kubernetes', icon: <SiKubernetes /> },
-        { name: 'Ansible', icon: <SiAnsible /> }
+        { name: 'RHEL 9, Ubuntu, Arch Linux', icon: <SiRedhat /> },
+        { name: 'systemd, SELinux', icon: <SiLinux /> },
+        { name: 'LVM, GRUB, UEFI/GPT', icon: <FaCogs /> },
+        { name: 'InfiniBand (RDMA, RoCE)', icon: <FaNetworkWired /> },
+        { name: 'TCP/IP, DNS, DHCP, PXE', icon: <FaServer /> },
+        { name: 'Troubleshooting: dmesg, strace, journalctl', icon: <FaTerminal /> }
       ]
     },
     {
-      category: 'Development',
+      category: 'Development & Automation',
       items: [
-        { name: 'Modern C++', icon: <SiCplusplus /> },
+        { name: 'C, C++17 (STL)', icon: <SiCplusplus /> },
         { name: 'Python', icon: <SiPython /> },
-        { name: 'React/Next + JavaScript', icon: <><SiReact /> <SiJavascript /></> },
         { name: 'Bash Shell Scripting', icon: <SiGnubash /> },
-        { name: 'CI/CD', icon: <FaBolt /> },
-        { name: 'Docker/Singularity', icon: <SiDocker /> }
+        { name: 'Ansible', icon: <SiAnsible /> },
+        { name: 'Docker,  Singularity, Podman', icon: <SiDocker /> },
+        { name: 'CI/CD (GitHub Actions, GitLab CI)', icon: <FaBolt /> }
       ]
     }
   ];
@@ -145,32 +144,34 @@ function CurrentWork() {
         <div className="row">
           <div className="col col--6">
             <h2 className="margin-bottom--lg">
-              <span className="badge badge--secondary">Systems Engineering</span>
+              <span className="badge badge--secondary">Operating HPC & AI Infrastructure at Scale</span>
             </h2>
-            <h3 className={styles.sectionTitle}>
-              Building ML Systems at Scale
-            </h3>
+            {/* <h3 className={styles.sectionTitle}>
+              HPC & AI Infrastructure at Scale
+            </h3> */}
             <p className={styles.sectionTagline}>
-                Focused on building and optimizing large-scale ML systems, distributed computing infrastructure, and 
-                production-grade tooling for high-performance workloads. Experience spanning modern ML frameworks, container orchestration, and HPC clusters.            </p>
+                Red Hat Certified System Administrator with an MSc in High Performance Computing from EPCC,
+                University of Edinburgh. Focused on administering Linux HPC and GPU clusters — job scheduling,
+                high-speed interconnects, parallel filesystems, and the operational tooling that keeps
+                large-scale AI/ML workloads running.</p>
             <div className={styles.expertiseSection}>
               <h4>Core Expertise</h4>
               <ul>
-                <li><strong>ML Systems:</strong> Distributed LLM training, LoRA fine-tuning, RAG architectures, PyTorch optimization</li>
-                <li><strong>Infrastructure:</strong> Kubernetes, Docker, Slurm, Terraform, Ansible, CI/CD pipelines</li>
-                <li><strong>Systems Programming:</strong> Production C++ and Python, Bash automation, performance optimization</li>
-                <li><strong>Open Source Leadership:</strong> Maintainer of Linux distribution serving 500K+ users globally</li>
+                <li><strong>Cluster Operations:</strong> Slurm, Kubernetes GPU scheduling, Lmod, MPI/OpenMP workloads, Base Command Manager</li>
+                <li><strong>Linux Engineering:</strong> RHEL 9, systemd, SELinux, LVM, kernel modules, root cause analysis</li>
+                <li><strong>Systems Programming:</strong> C, C++17, and Python for automation and operational tooling</li>
+                <li><strong>Open Source:</strong> Active contributor in the Linux ecosystem since 2020; maintainer of a distribution serving 500K+ users</li>
               </ul>
             </div>
             <div className={styles.hpcExperience}>
               <h4>HPC & Accelerator Infrastructure</h4>
               <p>
-                Production experience across multiple world-class supercomputing clusters:
-                <strong> ARCHER2, Cirrus, DKRZ Levante, PSC Bridges-2, EIDF GPU Cluster, EIDF Cerebras Cluster</strong>.
+                Hands-on administration and operations across world-class supercomputing clusters:
+                <strong> TeamEPCC H100 cluster, ARCHER2, Cirrus, PSC Bridges-2, DKRZ Levante, and the EIDF Kubernetes/Kueue GPU cluster</strong>.
               </p>
               <p>
-                Hands-on benchmarking and optimization across diverse hardware accelerators including
-                <strong> NVIDIA A100, H100, H200, AMD MI210, MI300X, and Cerebras CS-3</strong>.
+                Practical benchmarking and optimization experience across diverse hardware accelerators including
+                <strong> NVIDIA A100, H100, H200, AMD Instinct MI210, MI300X, and Cerebras CS-3</strong>.
               </p>
             </div>
           </div>
@@ -183,6 +184,56 @@ function CurrentWork() {
               />
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CredentialsSection() {
+  const credentials = [
+    {
+      icon: <FaGraduationCap />,
+      title: 'MSc, High Performance Computing',
+      issuer: 'EPCC, University of Edinburgh',
+      detail: 'Parallel programming (MPI, OpenMP), performance optimization, HPC architectures, and large-scale systems — at one of Europe’s leading supercomputing centres.',
+    },
+    {
+      icon: <FaCertificate />,
+      title: 'Red Hat Certified System Administrator (RHCSA)',
+      issuer: 'Red Hat',
+      detail: 'Package management (dnf/rpm), SELinux & firewalld, Podman containers, users & groups, storage (LVM, NFS, XFS, EXT4), networking, systemd, kernel modules.',
+    },
+    {
+      icon: <FaCertificate />,
+      title: 'Certified Kubernetes Administrator (CKA)',
+      issuer: 'The Linux Foundation — in progress',
+      detail: 'kubeadm, CRDs, cluster setup, networking, Ingress, Helm, Kustomize, storage (PV, PVCs), RBAC, troubleshooting.',
+    },
+    {
+      icon: <FaCertificate />,
+      title: 'NVIDIA Certified Professional — AI Operations (NCP-AIOL)',
+      issuer: 'NVIDIA — in progress',
+      detail: 'Base Command Manager, Slurm, Kubernetes/Kueue, InfiniBand, run:ai, MIG, GPU scheduling.',
+    },
+  ];
+
+  return (
+    <div className={clsx('padding-vert--xl', styles.section)}>
+      <div className="container">
+        <h2 className="text--center margin-bottom--xl">
+          <span className="badge badge--primary">Education & Certifications</span>
+        </h2>
+        <div className="row">
+          {credentials.map((cred, idx) => (
+            <div key={idx} className="col col--6 margin-bottom--lg">
+              <div className={styles.skillCard}>
+                <h3><span className={styles.skillIcon}>{cred.icon}</span> {cred.title}</h3>
+                <p><strong>{cred.issuer}</strong></p>
+                <p>{cred.detail}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -219,7 +270,7 @@ function ProjectsSection() {
   ];
 
   return (
-    <div className={clsx('padding-vert--xl', styles.section)}>
+    <div className={clsx('padding-vert--xl', styles.sectionAlt)}>
       <div className="container">
         <h2 className="text--center margin-bottom--xl">
           <span className="badge badge--primary">Featured Projects</span>
@@ -270,7 +321,7 @@ function DrummerSection() {
   ];
 
   return (
-    <div className={clsx('padding-vert--xl', styles.sectionAlt)}>
+    <div className={clsx('padding-vert--xl', styles.section)}>
       <div className="container">
         <h2 className="text--center margin-bottom--lg">
           <span className="badge badge--secondary">Beyond Engineering</span>
@@ -307,6 +358,7 @@ function Home() {
       <HeroSection />
       <SkillsSection />
       <CurrentWork />
+      <CredentialsSection />
       <ProjectsSection />
       <DrummerSection />
     </Layout>
