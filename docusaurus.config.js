@@ -95,7 +95,7 @@ const config = {
       // },
       navbar: {
         hideOnScroll: true,
-        title: 'DMKL',
+        title: 'Gaurang',
         logo: {
           alt: 'DemonKiller Logo',
           src: 'img/logo.svg',
