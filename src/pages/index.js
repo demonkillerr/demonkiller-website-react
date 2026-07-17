@@ -21,7 +21,7 @@ function HeroSection() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <div className={styles.roleTag}>
-              <span>🛠️ Infrastructure Engineer</span>
+              <span>🛠️ HPC Systems Administrator</span>
             </div>
             <h1 className={clsx('hero__title', styles.heroTitle)}>{siteConfig.title}</h1>
             <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
